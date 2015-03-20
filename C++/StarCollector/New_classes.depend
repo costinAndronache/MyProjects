@@ -1,0 +1,552 @@
+# depslib dependency file v1.0
+1377036424 source:e:\projects\new_classes\main.cpp
+	"SDL_gfxPrimitives.h"
+	"Player.h"
+	"Level.h"
+
+1376679334 source:e:\projects\new_classes\resourcebank.cpp
+	"ResourceBank.h"
+	<fstream>
+
+1376679084 e:\projects\new_classes\resourcebank.h
+	"SDL.h"
+	"SDL_image.h"
+
+1325738639 c:\sdl\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1326110987 c:\sdl\include\sdl_config.h
+	"SDL_platform.h"
+	"SDL_config_dreamcast.h"
+	"SDL_config_macos.h"
+	"SDL_config_macosx.h"
+	"SDL_config_symbian.h"
+	"SDL_config_win32.h"
+	"SDL_config_os2.h"
+	"SDL_config_minimal.h"
+
+1325738639 c:\sdl\include\sdl_platform.h
+
+1326110994 c:\sdl\include\sdl_config_win32.h
+	"SDL_platform.h"
+
+1326111000 c:\sdl\include\begin_code.h
+
+1325738639 c:\sdl\include\close_code.h
+
+1325738639 c:\sdl\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_keysym.h
+
+1325738639 c:\sdl\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1325738639 c:\sdl\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325810433 c:\sdl\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1376686356 e:\projects\new_classes\visualentity.h
+	"ResourceBank.h"
+
+1376650917 source:e:\projects\new_classes\visualentity.cpp
+	"VisualEntity.h"
+
+1373451695 source:e:\projects\new_classes\projection2d.cpp
+	"projection2D.h"
+
+1373450104 e:\projects\new_classes\projection2d.h
+
+1373967097 source:e:\projects\new_classes\shape2d.cpp
+	"shape2D.h"
+
+1373966736 e:\projects\new_classes\shape2d.h
+	"vector2d.h"
+	"projection2D.h"
+
+1373490033 e:\projects\new_classes\vector2d.h
+
+1373490778 source:e:\projects\new_classes\vector2d.cpp
+	"vector2d.h"
+	"utilities.h"
+	<cmath>
+
+1373963834 e:\projects\new_classes\utilities.h
+	"shape2D.h"
+
+1377077666 source:e:\projects\new_classes\utilities.cpp
+	"utilities.h"
+
+1377082534 source:e:\projects\new_classes\visualcollide.cpp
+	"VisualCollide.h"
+
+1376686386 e:\projects\new_classes\visualcollide.h
+	"VisualEntity.h"
+	"shape2D.h"
+	"utilities.h"
+
+1377076186 source:e:\projects\new_classes\gameactor.cpp
+	"GameActor.h"
+
+1377076186 e:\projects\new_classes\gameactor.h
+	"VisualCollide.h"
+	"Protocols.h"
+
+1376923306 e:\projects\new_classes\player.h
+	"GameActor.h"
+
+1377076186 source:e:\projects\new_classes\player.cpp
+	"Player.h"
+
+1103643786 c:\sdl\include\sdl_gfxprimitives.h
+	<math.h>
+	"SDL.h"
+
+1376778695 source:e:\projects\new_classes\fromtoactor.cpp
+	"FromToActor.h"
+
+1376778684 e:\projects\new_classes\fromtoactor.h
+	"GameActor.h"
+
+1376923364 source:e:\projects\new_classes\level_1.cpp
+	"Level_1.h"
+	"DefineList.h"
+	"DrawUtils.h"
+
+1376917557 e:\projects\new_classes\level_1.h
+	"AbstractLevel.h"
+	"Player.h"
+	"FromToActor.h"
+	"QuadTree.h"
+
+1376678511 e:\projects\new_classes\abstractlevel.h
+
+1373962629 e:\projects\new_classes\quadtree.h
+	"shape2D.h"
+
+1373964506 source:e:\projects\new_classes\quadtree.cpp
+	"QuadTree.h"
+
+1376778465 e:\projects\new_classes\protocols.h
+
+1376844802 e:\projects\new_classes\abstractbonus.h
+
+1376846476 e:\projects\new_classes\speedx_bonus.h
+	"AbstractBonus.h"
+
+1376923443 e:\projects\new_classes\definelist.h
+
+1376921884 source:e:\projects\new_classes\drawutils.cpp
+	"DrawUtils.h"
+
+1376921884 e:\projects\new_classes\drawutils.h
+	"SDL.h"
+	"SDL_gfxPrimitives.h"
+	"shape2D.h"
+
+1377081927 source:e:\projects\new_classes\level.cpp
+	"Level.h"
+	<fstream>
+
+1377036424 e:\projects\new_classes\level.h
+	"Player.h"
+	"FromToActor.h"
+	"SDL.h"
+	"DrawUtils.h"
+	"SDL_mixer.h"
+	"ResourceBank.h"
+
+1325810940 c:\sdl\include\sdl_mixer.h
+	"SDL_types.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1325738639 c:\sdl\include\sdl_types.h
+	"SDL_stdinc.h"
+
+1377087144 source:e:\projects\starcollector\drawutils.cpp
+	"DrawUtils.h"
+
+1376918284 e:\projects\starcollector\drawutils.h
+	"SDL.h"
+	"SDL_gfxPrimitives.h"
+	"shape2D.h"
+
+1379177862 e:\projects\starcollector\shape2d.h
+	"vector2d.h"
+	"projection2D.h"
+
+1373486433 e:\projects\starcollector\vector2d.h
+
+1373446504 e:\projects\starcollector\projection2d.h
+
+1376778695 source:e:\projects\starcollector\fromtoactor.cpp
+	"FromToActor.h"
+
+1376778684 e:\projects\starcollector\fromtoactor.h
+	"GameActor.h"
+
+1377186873 e:\projects\starcollector\gameactor.h
+	"VisualCollide.h"
+	"Protocols.h"
+
+1377183904 e:\projects\starcollector\visualcollide.h
+	"VisualEntity.h"
+	"shape2D.h"
+	"utilities.h"
+
+1376682756 e:\projects\starcollector\visualentity.h
+	"ResourceBank.h"
+
+1376675484 e:\projects\starcollector\resourcebank.h
+	"SDL.h"
+	"SDL_image.h"
+
+1379178272 e:\projects\starcollector\utilities.h
+
+1376774865 e:\projects\starcollector\protocols.h
+
+1377072586 source:e:\projects\starcollector\gameactor.cpp
+	"GameActor.h"
+
+1392151309 source:e:\projects\starcollector\level.cpp
+	"Level.h"
+	<fstream>
+	"TextDisplay.h"
+
+1377604704 e:\projects\starcollector\level.h
+	"Player.h"
+	"FromToShape.h"
+	"SDL.h"
+	"DrawUtils.h"
+	"SDL_mixer.h"
+	"ResourceBank.h"
+	"TextDisplay.h"
+
+1377344790 e:\projects\starcollector\player.h
+	"GameActor.h"
+
+1379178916 source:e:\projects\starcollector\player.cpp
+	"Player.h"
+
+1373448095 source:e:\projects\starcollector\projection2d.cpp
+	"projection2D.h"
+
+1373960906 source:e:\projects\starcollector\quadtree.cpp
+	"QuadTree.h"
+
+1373959029 e:\projects\starcollector\quadtree.h
+	"shape2D.h"
+
+1376675734 source:e:\projects\starcollector\resourcebank.cpp
+	"ResourceBank.h"
+	<fstream>
+
+1379178929 source:e:\projects\starcollector\shape2d.cpp
+	"shape2D.h"
+
+1379178272 source:e:\projects\starcollector\utilities.cpp
+	"utilities.h"
+
+1373487178 source:e:\projects\starcollector\vector2d.cpp
+	"vector2d.h"
+	"utilities.h"
+	<cmath>
+
+1379179030 source:e:\projects\starcollector\visualcollide.cpp
+	"VisualCollide.h"
+
+1376647317 source:e:\projects\starcollector\visualentity.cpp
+	"VisualEntity.h"
+
+1377801058 source:e:\projects\starcollector\main.cpp
+	"SDL_gfxPrimitives.h"
+	"Player.h"
+	"Level.h"
+	"SDL_ttf.h"
+
+1377342726 e:\projects\starcollector\fromtoshape.h
+	"shape2D.h"
+
+1377348279 source:e:\projects\starcollector\fromtoshape.cpp
+	"FromToShape.h"
+
+1382373118 source:e:\projects\starcollector\textdisplay.cpp
+	"TextDisplay.h"
+
+1377377321 e:\projects\starcollector\textdisplay.h
+	"SDL_ttf.h"
+
+1325814793 c:\sdl\include\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1377087144 source:e:\programming\projects\starcollector\drawutils.cpp
+	"DrawUtils.h"
+
+1376918284 e:\programming\projects\starcollector\drawutils.h
+	"SDL.h"
+	"SDL_gfxPrimitives.h"
+	"shape2D.h"
+
+1379177862 e:\programming\projects\starcollector\shape2d.h
+	"vector2d.h"
+	"projection2D.h"
+
+1373486433 e:\programming\projects\starcollector\vector2d.h
+
+1373446504 e:\programming\projects\starcollector\projection2d.h
+
+1377348279 source:e:\programming\projects\starcollector\fromtoshape.cpp
+	"FromToShape.h"
+
+1377342726 e:\programming\projects\starcollector\fromtoshape.h
+	"shape2D.h"
+
+1377072586 source:e:\programming\projects\starcollector\gameactor.cpp
+	"GameActor.h"
+
+1377186873 e:\programming\projects\starcollector\gameactor.h
+	"VisualCollide.h"
+	"Protocols.h"
+
+1377183904 e:\programming\projects\starcollector\visualcollide.h
+	"VisualEntity.h"
+	"shape2D.h"
+	"utilities.h"
+
+1376682756 e:\programming\projects\starcollector\visualentity.h
+	"ResourceBank.h"
+
+1376675484 e:\programming\projects\starcollector\resourcebank.h
+	"SDL.h"
+	"SDL_image.h"
+
+1379178272 e:\programming\projects\starcollector\utilities.h
+
+1376774865 e:\programming\projects\starcollector\protocols.h
+
+1377801058 source:e:\programming\projects\starcollector\main.cpp
+	"SDL_gfxPrimitives.h"
+	"Player.h"
+	"Level.h"
+	"SDL_ttf.h"
+
+1377344790 e:\programming\projects\starcollector\player.h
+	"GameActor.h"
+
+1377604704 e:\programming\projects\starcollector\level.h
+	"Player.h"
+	"FromToShape.h"
+	"SDL.h"
+	"DrawUtils.h"
+	"SDL_mixer.h"
+	"ResourceBank.h"
+	"TextDisplay.h"
+
+1377377321 e:\programming\projects\starcollector\textdisplay.h
+	"SDL_ttf.h"
+
+1379178916 source:e:\programming\projects\starcollector\player.cpp
+	"Player.h"
+
+1373448095 source:e:\programming\projects\starcollector\projection2d.cpp
+	"projection2D.h"
+
+1373960906 source:e:\programming\projects\starcollector\quadtree.cpp
+	"QuadTree.h"
+
+1373959029 e:\programming\projects\starcollector\quadtree.h
+	"shape2D.h"
+
+1376675734 source:e:\programming\projects\starcollector\resourcebank.cpp
+	"ResourceBank.h"
+	<fstream>
+
+1379178929 source:e:\programming\projects\starcollector\shape2d.cpp
+	"shape2D.h"
+
+1382373118 source:e:\programming\projects\starcollector\textdisplay.cpp
+	"TextDisplay.h"
+
+1379178272 source:e:\programming\projects\starcollector\utilities.cpp
+	"utilities.h"
+
+1373487178 source:e:\programming\projects\starcollector\vector2d.cpp
+	"vector2d.h"
+	"utilities.h"
+	<cmath>
+
+1379179030 source:e:\programming\projects\starcollector\visualcollide.cpp
+	"VisualCollide.h"
+
+1376647317 source:e:\programming\projects\starcollector\visualentity.cpp
+	"VisualEntity.h"
+

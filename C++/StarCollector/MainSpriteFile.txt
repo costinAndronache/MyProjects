@@ -1,0 +1,4 @@
+sprites.txt
+Buster.txt
+Block.txt
+starsheet.txt
