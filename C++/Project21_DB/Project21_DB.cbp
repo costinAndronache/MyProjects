@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Project21_DB" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Project21_DB" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Project21_DB" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="BooleanEvaluator/BEOperatorAND.h" />
+		<Unit filename="BooleanEvaluator/BEOperatorFactory.cpp" />
+		<Unit filename="BooleanEvaluator/BEOperatorFactory.h" />
+		<Unit filename="BooleanEvaluator/BEOperatorNOT.h" />
+		<Unit filename="BooleanEvaluator/BEOperatorOR.h" />
+		<Unit filename="BooleanEvaluator/BEvalOperator.h" />
+		<Unit filename="BooleanEvaluator/BooleanEvaluator.cpp" />
+		<Unit filename="BooleanEvaluator/BooleanEvaluator.h" />
+		<Unit filename="Command/AlterCommand.cpp" />
+		<Unit filename="Command/AlterCommand.h" />
+		<Unit filename="Command/Command.cpp" />
+		<Unit filename="Command/Command.h" />
+		<Unit filename="Command/CommandFactory.cpp" />
+		<Unit filename="Command/CommandFactory.h" />
+		<Unit filename="Command/Commands.h" />
+		<Unit filename="Command/CreateCommand.cpp" />
+		<Unit filename="Command/CreateCommand.h" />
+		<Unit filename="Command/DeleteCommand.cpp" />
+		<Unit filename="Command/DeleteCommand.h" />
+		<Unit filename="Command/DropCommand.cpp" />
+		<Unit filename="Command/DropCommand.h" />
+		<Unit filename="Command/InsertCommand.cpp" />
+		<Unit filename="Command/InsertCommand.h" />
+		<Unit filename="Command/SelectCommand.cpp" />
+		<Unit filename="Command/SelectCommand.h" />
+		<Unit filename="DbContainers/DbBoolColumn.cpp" />
+		<Unit filename="DbContainers/DbBoolColumn.h" />
+		<Unit filename="DbContainers/DbColumn.h" />
+		<Unit filename="DbContainers/DbColumnFactory.cpp" />
+		<Unit filename="DbContainers/DbColumnFactory.h" />
+		<Unit filename="DbContainers/DbColumns.h" />
+		<Unit filename="DbContainers/DbDatabase.cpp" />
+		<Unit filename="DbContainers/DbDatabase.h" />
+		<Unit filename="DbContainers/DbIntColumn.cpp" />
+		<Unit filename="DbContainers/DbIntColumn.h" />
+		<Unit filename="DbContainers/DbMapDatabase.cpp" />
+		<Unit filename="DbContainers/DbMapDatabase.h" />
+		<Unit filename="DbContainers/DbMapTable.cpp" />
+		<Unit filename="DbContainers/DbMapTable.h" />
+		<Unit filename="DbContainers/DbStringColumn.cpp" />
+		<Unit filename="DbContainers/DbStringColumn.h" />
+		<Unit filename="DbContainers/DbTable.h" />
+		<Unit filename="DbContainers/DbTableSnapshot.cpp" />
+		<Unit filename="DbContainers/DbTableSnapshot.h" />
+		<Unit filename="DbRead.txt" />
+		<Unit filename="DbSave.txt" />
+		<Unit filename="DbTypes/DbBool.cpp" />
+		<Unit filename="DbTypes/DbBool.h" />
+		<Unit filename="DbTypes/DbDouble.cpp" />
+		<Unit filename="DbTypes/DbDouble.h" />
+		<Unit filename="DbTypes/DbInt.cpp" />
+		<Unit filename="DbTypes/DbInt.h" />
+		<Unit filename="DbTypes/DbNull.cpp" />
+		<Unit filename="DbTypes/DbNull.h" />
+		<Unit filename="DbTypes/DbString.cpp" />
+		<Unit filename="DbTypes/DbString.h" />
+		<Unit filename="DbTypes/DbType.h" />
+		<Unit filename="DbTypes/DbTypes.h" />
+		<Unit filename="DbVariables/DbBoolVar.cpp" />
+		<Unit filename="DbVariables/DbBoolVar.h" />
+		<Unit filename="DbVariables/DbDoubleVar.cpp" />
+		<Unit filename="DbVariables/DbDoubleVar.h" />
+		<Unit filename="DbVariables/DbIntVar.cpp" />
+		<Unit filename="DbVariables/DbIntVar.h" />
+		<Unit filename="DbVariables/DbNullVar.h" />
+		<Unit filename="DbVariables/DbStringVar.cpp" />
+		<Unit filename="DbVariables/DbStringVar.h" />
+		<Unit filename="DbVariables/DbVariable.h" />
+		<Unit filename="DbVariables/DbVariables.h" />
+		<Unit filename="Selectors/ConditionSelector.cpp" />
+		<Unit filename="Selectors/ConditionSelector.h" />
+		<Unit filename="Selectors/DummySelector.h" />
+		<Unit filename="Selectors/Selector.h" />
+		<Unit filename="Selectors/Selectors.h" />
+		<Unit filename="Selectors/TFStatement.cpp" />
+		<Unit filename="Selectors/TFStatement.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

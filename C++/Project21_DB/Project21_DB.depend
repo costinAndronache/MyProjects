@@ -1,0 +1,303 @@
+# depslib dependency file v1.0
+1401216544 source:e:\programming\projects\teme facultate\teme oop\project21_db\main.cpp
+	<iostream>
+	"DbTypes/DbTypes.h"
+	"DbVariables/DbVariables.h"
+	"BooleanEvaluator/BEOperatorFactory.h"
+	"BooleanEvaluator/BooleanEvaluator.h"
+	"DbContainers/DbColumns.h"
+	"DbContainers/DbMapTable.h"
+	"Selectors/TFStatement.h"
+	"Selectors/Selectors.h"
+	"DbContainers/DbTableSnapshot.h"
+	"Selectors/Selectors.h"
+	<cstdlib>
+	"Command/Commands.h"
+	"Command/CommandFactory.h"
+	"DbContainers/DbMapDatabase.h"
+
+1400793755 e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbtype.h
+	<string>
+
+1400793802 e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbint.h
+	"DbType.h"
+
+1400793802 e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbstring.h
+	"DbType.h"
+
+1400874465 e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbtypes.h
+	"DbInt.h"
+	"DbString.h"
+	"DbBOOL.h"
+	"DbNull.h"
+	"DbDouble.h"
+
+1400793802 e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbbool.h
+	"DbType.h"
+
+1401006022 e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbvariable.h
+	"../DbTypes/DbType.h"
+
+1400882012 e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbvariables.h
+	"DbIntVar.h"
+	"DbNullVar.h"
+	"DbStringVar.h"
+	"DbBoolVar.h"
+	"DbDoubleVar.h"
+
+1401006283 e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbintvar.h
+	"DbVariable.h"
+	"../DbTypes/DbTypes.h"
+
+1401006283 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbintvar.cpp
+	"DbIntVar.h"
+	"../DbTypes/DbNull.h"
+	<sstream>
+
+1400793346 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbbool.cpp
+	"DbBool.h"
+
+1400793346 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbint.cpp
+	"DbInt.h"
+
+1400793460 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbdouble.cpp
+	"DbDouble.h"
+
+1400793802 e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbdouble.h
+	"DbType.h"
+
+1400793529 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbstring.cpp
+	"DbString.h"
+
+1400793641 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbnull.cpp
+	"DbNull.h"
+
+1400793802 e:\programming\projects\teme facultate\teme oop\project21_db\dbtypes\dbnull.h
+	"DbTypes.h"
+
+1401053978 e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbnullvar.h
+	"../DbTypes/DbTypes.h"
+	"DbVariable.h"
+
+1401006283 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbstringvar.cpp
+	"DbStringVar.h"
+
+1401006283 e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbstringvar.h
+	"../DbTypes/DbTypes.h"
+	"DbVariable.h"
+
+1401006283 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbboolvar.cpp
+	"DbBoolVar.h"
+
+1401005631 e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbboolvar.h
+	"../DbTypes/DbTypes.h"
+	"DbVariable.h"
+
+1401006283 e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbdoublevar.h
+	"../DbTypes/DbTypes.h"
+	"DbVariable.h"
+
+1401006283 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbvariables\dbdoublevar.cpp
+	"DbDoubleVar.h"
+	<sstream>
+
+1400927942 e:\programming\projects\teme facultate\teme oop\project21_db\booleanevaluator\beoperatorfactory.h
+	"BEOperatorAND.h"
+	"BEOperatorNOT.h"
+	"BEOperatorOR.h"
+	<map>
+
+1400927558 e:\programming\projects\teme facultate\teme oop\project21_db\booleanevaluator\beoperatorand.h
+	"BEvalOperator.h"
+
+1400926468 e:\programming\projects\teme facultate\teme oop\project21_db\booleanevaluator\bevaloperator.h
+	<stack>
+	<string>
+
+1400927497 e:\programming\projects\teme facultate\teme oop\project21_db\booleanevaluator\beoperatornot.h
+	"BEOperatorNOT.h"
+
+1400927595 e:\programming\projects\teme facultate\teme oop\project21_db\booleanevaluator\beoperatoror.h
+	"BEvalOperator.h"
+
+1400956085 source:e:\programming\projects\teme facultate\teme oop\project21_db\booleanevaluator\beoperatorfactory.cpp
+	"BEOperatorFactory.h"
+
+1401034821 source:e:\programming\projects\teme facultate\teme oop\project21_db\booleanevaluator\booleanevaluator.cpp
+	"BooleanEvaluator.h"
+	<cstring>
+	<iostream>
+
+1400957243 e:\programming\projects\teme facultate\teme oop\project21_db\booleanevaluator\booleanevaluator.h
+	<stack>
+	<vector>
+	"BEOperatorFactory.h"
+
+1401218474 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbintcolumn.cpp
+	"DbIntColumn.h"
+
+1401019569 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbintcolumn.h
+	"DbColumn.h"
+
+1401052345 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbcolumn.h
+	"../DbVariables/DbVariables.h"
+	<vector>
+	<algorithm>
+
+1401082196 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbstringcolumn.cpp
+	"DbStringColumn.h"
+
+1401019569 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbstringcolumn.h
+	"DbColumn.h"
+
+1401052502 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbcolumns.h
+	"DbIntColumn.h"
+	"DbStringColumn.h"
+	"DbBoolColumn.h"
+
+1401050395 source:e:\programming\projects\teme facultate\teme oop\project21_db\selectors\tfstatement.cpp
+	"TFStatement.h"
+	<cstring>
+	<iostream>
+
+1401005779 e:\programming\projects\teme facultate\teme oop\project21_db\selectors\tfstatement.h
+	"../DbContainers/DbTable.h"
+
+1401083365 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbtable.h
+	"DbColumn.h"
+	"DbTableSnapshot.h"
+	"../Selectors/Selector.h"
+
+1401083365 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbmaptable.cpp
+	"DbMapTable.h"
+	<algorithm>
+	<iostream>
+
+1401083365 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbmaptable.h
+	"DbTable.h"
+	<map>
+
+1401030346 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbtablesnapshot.cpp
+	"DbTableSnapshot.h"
+	<algorithm>
+
+1401015700 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbtablesnapshot.h
+	"DbColumn.h"
+
+1401019109 e:\programming\projects\teme facultate\teme oop\project21_db\selectors\selector.h
+
+1401032283 e:\programming\projects\teme facultate\teme oop\project21_db\selectors\selectors.h
+	"DummySelector.h"
+	"ConditionSelector.h"
+
+1401025470 e:\programming\projects\teme facultate\teme oop\project21_db\selectors\dummyselector.h
+	"Selector.h"
+
+1401051042 source:e:\programming\projects\teme facultate\teme oop\project21_db\selectors\conditionselector.cpp
+	"ConditionSelector.h"
+	<cstring>
+	<iostream>
+
+1401028325 e:\programming\projects\teme facultate\teme oop\project21_db\selectors\conditionselector.h
+	"TFStatement.h"
+	"Selector.h"
+	<map>
+	"../BooleanEvaluator/BooleanEvaluator.h"
+
+1401036964 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbdatabase.cpp
+
+1401218410 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbmapdatabase.cpp
+	"DbMapDatabase.h"
+	<string>
+
+1401082909 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbmapdatabase.h
+	"DbDatabase.h"
+	"DbColumnFactory.h"
+	"DbMapTable.h"
+	<map>
+	<string>
+
+1401082842 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbdatabase.h
+	"DbTable.h"
+	<fstream>
+
+1401052627 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbcolumnfactory.cpp
+	"DbColumnFactory.h"
+
+1401037981 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbcolumnfactory.h
+	"DbColumns.h"
+
+1401041370 source:e:\programming\projects\teme facultate\teme oop\project21_db\command\command.cpp
+	"Command.h"
+	<cstring>
+
+1401041370 e:\programming\projects\teme facultate\teme oop\project21_db\command\command.h
+	<iostream>
+	<string>
+	<vector>
+	"../DbContainers/DbDatabase.h"
+
+1401055005 source:e:\programming\projects\teme facultate\teme oop\project21_db\command\createcommand.cpp
+	"CreateCommand.h"
+	"../DbContainers/DbColumnFactory.h"
+	"../DbContainers/DbMapTable.h"
+
+1401041370 e:\programming\projects\teme facultate\teme oop\project21_db\command\createcommand.h
+	"Command.h"
+
+1401053586 e:\programming\projects\teme facultate\teme oop\project21_db\command\commands.h
+	"CreateCommand.h"
+	"DropCommand.h"
+	"AlterCommand.h"
+	"InsertCommand.h"
+	"SelectCommand.h"
+	"DeleteCommand.h"
+
+1401042935 source:e:\programming\projects\teme facultate\teme oop\project21_db\command\dropcommand.cpp
+	"DropCommand.h"
+	"../DbContainers/DbColumnFactory.h"
+	"../DbContainers/DbMapTable.h"
+
+1401042546 e:\programming\projects\teme facultate\teme oop\project21_db\command\dropcommand.h
+	"Command.h"
+
+1401044321 source:e:\programming\projects\teme facultate\teme oop\project21_db\command\altercommand.cpp
+	"AlterCommand.h"
+	"../DbContainers/DbColumnFactory.h"
+
+1401043161 e:\programming\projects\teme facultate\teme oop\project21_db\command\altercommand.h
+	"Command.h"
+
+1401045460 source:e:\programming\projects\teme facultate\teme oop\project21_db\command\insertcommand.cpp
+	"InsertCommand.h"
+
+1401045044 e:\programming\projects\teme facultate\teme oop\project21_db\command\insertcommand.h
+	"Command.h"
+
+1401057813 source:e:\programming\projects\teme facultate\teme oop\project21_db\command\selectcommand.cpp
+	"SelectCommand.h"
+	"../Selectors/Selectors.h"
+
+1401045956 e:\programming\projects\teme facultate\teme oop\project21_db\command\selectcommand.h
+	"Command.h"
+
+1401082196 e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbboolcolumn.h
+	"DbColumn.h"
+
+1401052405 source:e:\programming\projects\teme facultate\teme oop\project21_db\dbcontainers\dbboolcolumn.cpp
+	"DbBoolColumn.h"
+	"DbBoolColumn.h"
+
+1401053566 source:e:\programming\projects\teme facultate\teme oop\project21_db\command\deletecommand.cpp
+	"DeleteCommand.h"
+	"../Selectors/Selectors.h"
+
+1401053151 e:\programming\projects\teme facultate\teme oop\project21_db\command\deletecommand.h
+	"Command.h"
+
+1401054182 e:\programming\projects\teme facultate\teme oop\project21_db\command\commandfactory.h
+	"Commands.h"
+
+1401054773 source:e:\programming\projects\teme facultate\teme oop\project21_db\command\commandfactory.cpp
+	"CommandFactory.h"
+

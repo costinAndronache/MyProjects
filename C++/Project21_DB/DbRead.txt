@@ -1,0 +1,19 @@
+2
+tableName1 2 3
+colNameOne INT
+21
+22
+23
+colNameTwo STRING
+str1
+str2
+str3
+
+myTable 2 1
+myINT INT
+1
+mySTRING STRING
+mystringvalue
+
+
+//fara cifre in nume de coloane

@@ -1,0 +1,534 @@
+# depslib dependency file v1.0
+1392697285 source:e:\projects\sdl2\simplesnake\main.cpp
+	<iostream>
+	"Headers/CTerrainMatrix.h"
+	"CScreenDisplay.h"
+	"Headers/CSnake.h"
+	"CTimer.h"
+	"Headers/CFoodManager.h"
+	"Headers/CBlockManager.h"
+
+1392327099 e:\projects\sdl2\simplesnake\cterrainmatrix.h
+	<cstring>
+	"CScreenDisplay.h"
+	"SimpleSnakeDefinitions.h"
+
+1392253673 c:\sdl2\my_include\cscreendisplay.h
+	"SDL.h"
+
+1382584023 c:\sdl2\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_assert.h"
+	"SDL_atomic.h"
+	"SDL_audio.h"
+	"SDL_clipboard.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_filesystem.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_haptic.h"
+	"SDL_hints.h"
+	"SDL_loadso.h"
+	"SDL_log.h"
+	"SDL_messagebox.h"
+	"SDL_mutex.h"
+	"SDL_power.h"
+	"SDL_render.h"
+	"SDL_rwops.h"
+	"SDL_system.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_version.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<math.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_config.h
+	"SDL_platform.h"
+
+1382584023 c:\sdl2\include\sdl_platform.h
+	"AvailabilityMacros.h"
+	"TargetConditionals.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\begin_code.h
+
+1382584023 c:\sdl2\include\close_code.h
+
+1382584023 c:\sdl2\include\sdl_assert.h
+	"SDL_config.h"
+	"begin_code.h"
+	<signal.h>
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_atomic.h
+	"SDL_stdinc.h"
+	"SDL_platform.h"
+	"begin_code.h"
+	<intrin.h>
+	<libkern/OSAtomic.h>
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_endian.h
+	"SDL_stdinc.h"
+	<endian.h>
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_atomic.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_clipboard.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	<intrin.h>
+	<intrin.h>
+	<altivec.h>
+	<mmintrin.h>
+	<mm3dnow.h>
+	<xmmintrin.h>
+	<emmintrin.h>
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_gamecontroller.h"
+	"SDL_quit.h"
+	"SDL_gesture.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_surface.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_pixels.h
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_rect.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_pixels.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_surface.h
+	"SDL_stdinc.h"
+	"SDL_pixels.h"
+	"SDL_rect.h"
+	"SDL_blendmode.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_blendmode.h
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keycode.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_keycode.h
+	"SDL_stdinc.h"
+	"SDL_scancode.h"
+
+1382584023 c:\sdl2\include\sdl_scancode.h
+	"SDL_stdinc.h"
+
+1382584023 c:\sdl2\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_gamecontroller.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1382584023 c:\sdl2\include\sdl_gesture.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"SDL_touch.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_touch.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_filesystem.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_haptic.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_joystick.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_hints.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_log.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_messagebox.h
+	"SDL_stdinc.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_power.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_render.h
+	"SDL_stdinc.h"
+	"SDL_rect.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_system.h
+	"SDL_stdinc.h"
+	"SDL_keyboard.h"
+	"SDL_render.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1382584023 c:\sdl2\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1392326685 e:\projects\sdl2\simplesnake\simplesnakedefinitions.h
+
+1392413567 source:e:\projects\sdl2\simplesnake\sources\cterrainmatrix.cpp
+	"../Headers/CTerrainMatrix.h"
+
+1392346862 e:\projects\sdl2\simplesnake\headers\cterrainmatrix.h
+	<cstring>
+	"CScreenDisplay.h"
+	"SimpleSnakeDefinitions.h"
+
+1392697428 e:\projects\sdl2\simplesnake\headers\simplesnakedefinitions.h
+
+1392328536 source:e:\projects\sdl2\simplesnake\my_include\canimationinfo.cpp
+	"..//my_include//CAnimationInfo.h"
+	<cstring>
+
+1392162950 e:\projects\sdl2\simplesnake\\my_include\\canimationinfo.h
+	"CTextureManager.h"
+	"CTimer.h"
+
+1392149179 e:\projects\sdl2\simplesnake\\my_include\\ctexturemanager.h
+	"SDL.h"
+	"SDL_image.h"
+	"Definitions.h"
+	<cstdlib>
+	<map>
+	<vector>
+
+1376152755 c:\sdl2\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1392079696 e:\projects\sdl2\simplesnake\\my_include\\definitions.h
+	"SDL.h"
+	<map>
+	<vector>
+
+1392157056 e:\projects\sdl2\simplesnake\\my_include\\ctimer.h
+	"SDL.h"
+
+1392253743 source:e:\projects\sdl2\simplesnake\my_include\cdrawableshape.cpp
+	"CDrawableShape.h"
+
+1392253189 e:\projects\sdl2\simplesnake\my_include\cdrawableshape.h
+	"SDL2_gfxPrimitives.h"
+	"Geometry/shape2D.h"
+
+1346859512 c:\sdl2\include\sdl2_gfxprimitives.h
+	<math.h>
+	"SDL.h"
+
+1392253215 e:\projects\sdl2\simplesnake\my_include\geometry\shape2d.h
+	"vector2d.h"
+	"projection2D.h"
+
+1373486433 e:\projects\sdl2\simplesnake\my_include\geometry\vector2d.h
+
+1373446504 e:\projects\sdl2\simplesnake\my_include\geometry\projection2d.h
+
+1392138591 source:e:\projects\sdl2\simplesnake\my_include\cscreendisplay.cpp
+	"CScreenDisplay.h"
+
+1392253673 e:\projects\sdl2\simplesnake\my_include\cscreendisplay.h
+	"SDL.h"
+
+1392167395 source:e:\projects\sdl2\simplesnake\my_include\ctexturemanager.cpp
+	"CTextureManager.h"
+	<iostream>
+	<fstream>
+	<cstring>
+
+1392149179 e:\projects\sdl2\simplesnake\my_include\ctexturemanager.h
+	"SDL.h"
+	"SDL_image.h"
+	"Definitions.h"
+	<cstdlib>
+	<map>
+	<vector>
+
+1392079696 e:\projects\sdl2\simplesnake\my_include\definitions.h
+	"SDL.h"
+	<map>
+	<vector>
+
+1392141264 source:e:\projects\sdl2\simplesnake\my_include\ctimer.cpp
+
+1392253673 e:\projects\sdl2\simplesnake\cscreendisplay.h
+	"SDL.h"
+
+1392328748 source:e:\projects\sdl2\simplesnake\canimationinfo.cpp
+	"CAnimationInfo.h"
+	<cstring>
+
+1392162950 e:\projects\sdl2\simplesnake\canimationinfo.h
+	"CTextureManager.h"
+	"CTimer.h"
+
+1392149179 e:\projects\sdl2\simplesnake\ctexturemanager.h
+	"SDL.h"
+	"SDL_image.h"
+	"Definitions.h"
+	<cstdlib>
+	<map>
+	<vector>
+
+1392079696 e:\projects\sdl2\simplesnake\definitions.h
+	"SDL.h"
+	<map>
+	<vector>
+
+1392157056 e:\projects\sdl2\simplesnake\ctimer.h
+	"SDL.h"
+
+1392253743 source:e:\projects\sdl2\simplesnake\cdrawableshape.cpp
+	"CDrawableShape.h"
+
+1392253189 e:\projects\sdl2\simplesnake\cdrawableshape.h
+	"SDL2_gfxPrimitives.h"
+	"Geometry/shape2D.h"
+
+1392253215 c:\sdl2\my_include\geometry\shape2d.h
+	"vector2d.h"
+	"projection2D.h"
+
+1373486433 c:\sdl2\my_include\geometry\vector2d.h
+
+1373446504 c:\sdl2\my_include\geometry\projection2d.h
+
+1392138591 source:e:\projects\sdl2\simplesnake\cscreendisplay.cpp
+	"CScreenDisplay.h"
+
+1392167395 source:e:\projects\sdl2\simplesnake\ctexturemanager.cpp
+	"CTextureManager.h"
+	<iostream>
+	<fstream>
+	<cstring>
+
+1392141264 source:e:\projects\sdl2\simplesnake\ctimer.cpp
+
+1373448095 source:e:\projects\sdl2\simplesnake\projection2d.cpp
+	"projection2D.h"
+
+1373446504 e:\projects\sdl2\simplesnake\projection2d.h
+
+1373960906 source:e:\projects\sdl2\simplesnake\quadtree.cpp
+	"QuadTree.h"
+
+1373959029 e:\projects\sdl2\simplesnake\quadtree.h
+	"shape2D.h"
+
+1392253215 e:\projects\sdl2\simplesnake\shape2d.h
+	"vector2d.h"
+	"projection2D.h"
+
+1373486433 e:\projects\sdl2\simplesnake\vector2d.h
+
+1392253163 source:e:\projects\sdl2\simplesnake\shape2d.cpp
+	"shape2D.h"
+
+1379178272 source:e:\projects\sdl2\simplesnake\utilities.cpp
+	"utilities.h"
+
+1379178272 e:\projects\sdl2\simplesnake\utilities.h
+
+1373487178 source:e:\projects\sdl2\simplesnake\vector2d.cpp
+	"vector2d.h"
+	"utilities.h"
+	<cmath>
+
+1392423202 e:\projects\sdl2\simplesnake\headers\csnake.h
+	"CTerrainMatrix.h"
+
+1392426103 source:e:\projects\sdl2\simplesnake\sources\csnake.cpp
+	"..//Headers//CSnake.h"
+
+1392423202 e:\projects\sdl2\simplesnake\\headers\\csnake.h
+	"CTerrainMatrix.h"
+
+1392346862 e:\projects\sdl2\simplesnake\\headers\\cterrainmatrix.h
+	<cstring>
+	"CScreenDisplay.h"
+	"SimpleSnakeDefinitions.h"
+
+1392697428 e:\projects\sdl2\simplesnake\\headers\\simplesnakedefinitions.h
+
+1392364865 e:\projects\sdl2\simplesnake\headers\cfoodmanager.h
+	<cstdlib>
+	"..//Headers//CTerrainMatrix.h"
+
+1392365839 source:e:\projects\sdl2\simplesnake\sources\cfoodmanager.cpp
+	"../Headers/CFoodManager.h"
+
+1392412104 e:\projects\sdl2\simplesnake\headers\cblockmanager.h
+	<cstdlib>
+	"..//Headers//CTerrainMatrix.h"
+
+1392412366 source:e:\projects\sdl2\simplesnake\sources\cblockmanager.cpp
+	"../Headers/CBlockManager.h"
+
