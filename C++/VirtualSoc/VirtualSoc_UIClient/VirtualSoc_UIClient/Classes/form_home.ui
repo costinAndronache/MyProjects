@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form_Home</class>
+ <widget class="QWidget" name="Form_Home">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>402</width>
+    <height>285</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>10</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Loma</family>
+     <pointsize>16</pointsize>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>VirtualSoc Login</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>50</y>
+     <width>160</width>
+     <height>231</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Username</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="usernameTextField"/>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Password</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="passwordTextField"/>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="loginBtn">
+      <property name="text">
+       <string>Login</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Logout</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="registerBtn">
+      <property name="text">
+       <string>Register</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

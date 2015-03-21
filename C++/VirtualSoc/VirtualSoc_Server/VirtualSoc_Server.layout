@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="Classes/WorkerDatabase/WorkerDatabase.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="834" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="../CommonUtilities/NetworkUtilities/NetworkUtilities.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="248" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../CommonUtilities/json/jsoncpp.cpp" open="1" top="1" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3162" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../CommonUtilities/Queue.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1244" topLine="32" />
+		</Cursor>
+	</File>
+	<File name="Classes/Worker/Worker.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="179" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../CommonUtilities/NetworkUtilities/NetworkUtilities.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="348" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Classes/WorkerDatabase/WorkerDatabase.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="549" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="Classes/ChatServersManager.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="445" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Classes/ChatGroupServer/ChatGroupMiniServer.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="747" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Classes/Worker/Worker.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2973" topLine="100" />
+		</Cursor>
+	</File>
+	<File name="Classes/ApiManager/ApiManager.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="632" topLine="19" />
+		</Cursor>
+	</File>
+	<File name="Classes/WorkerManager/WorkerManager.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="527" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Classes/ChatServersManager.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="352" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="345" topLine="5" />
+		</Cursor>
+	</File>
+	<File name="Classes/ApiManager/ApiManager.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="27397" topLine="867" />
+		</Cursor>
+	</File>
+	<File name="../CommonUtilities/ThreadUtilities/Mutex.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="171" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Classes/ChatGroupServer/ChatGroupMiniServer.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3284" topLine="99" />
+		</Cursor>
+	</File>
+	<File name="../CommonUtilities/CommonConstants.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="447" topLine="50" />
+		</Cursor>
+	</File>
+	<File name="Classes/WorkerManager/WorkerManager.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1092" topLine="30" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

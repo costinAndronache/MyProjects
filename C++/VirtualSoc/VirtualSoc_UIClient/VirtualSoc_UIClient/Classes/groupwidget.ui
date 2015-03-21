@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GroupWidget</class>
+ <widget class="QWidget" name="GroupWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>283</width>
+    <height>120</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>71</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Group name:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>101</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Group description:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="groupDescLabel">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>70</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="groupNameLabel">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>10</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>name here</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

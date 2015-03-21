@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="VirtualSoc_Server" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/VirtualSoc_Server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-std=gnu++11" />
+					<Add directory="../CommonUtilities" />
+					<Add directory="../CommonUtilities/json" />
+					<Add directory="Classes/WorkerManager" />
+					<Add directory="Classes/Worker" />
+					<Add directory="Classes/ApiManager" />
+					<Add directory="Classes/WorkerDatabase" />
+					<Add directory="VirtualSoc_Server/Classes/ChatGroupServer" />
+					<Add directory="/home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/ChatGroupServer" />
+					<Add directory="VirtualSoc_Server/Classes" />
+					<Add directory="Classes" />
+				</Compiler>
+				<Linker>
+					<Add option="-lpthread" />
+					<Add library="/usr/lib/oracle/12.1/client/lib/libclntsh.so" />
+					<Add library="/usr/lib/oracle/12.1/client/lib/libnnz12.so" />
+					<Add library="/usr/lib/oracle/12.1/client/lib/libocci.so" />
+					<Add directory="/usr/lib/oracle/12.1/client/lib/ " />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/VirtualSoc_Server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=gnu++11" />
+					<Add directory="Classes/WorkerManager" />
+					<Add directory="Classes/Worker" />
+					<Add directory="/usr/include/oracle/12.1/client" />
+					<Add directory="Classes/ApiManager" />
+					<Add directory="VirtualSoc_Server/Classes/WorkerDatabase" />
+					<Add directory="VirtualSoc_Server/Classes/ChatGroupServer" />
+					<Add directory="VirtualSoc_Server/Classes" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lpthread" />
+					<Add library="/usr/lib/oracle/12.1/client/lib/libclntsh.so" />
+					<Add library="/usr/lib/oracle/12.1/client/lib/libnnz12.so" />
+					<Add library="/usr/lib/oracle/12.1/client/lib/libocci.so" />
+					<Add directory="/usr/lib/oracle/12.1/client/lib/" />
+					<Add directory="/usr/lib/oracle/12.1/client/lib/ " />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="/usr/include/oracle/12.1/client" />
+		</Compiler>
+		<Linker>
+			<Add option="-locci" />
+			<Add directory="/usr/lib/oracle/12.1/client/lib/" />
+		</Linker>
+		<Unit filename="../CommonUtilities/CommonConstants.h" />
+		<Unit filename="../CommonUtilities/NetworkUtilities/NetworkUtilities.cpp" />
+		<Unit filename="../CommonUtilities/NetworkUtilities/NetworkUtilities.h" />
+		<Unit filename="../CommonUtilities/Queue.h" />
+		<Unit filename="../CommonUtilities/ThreadUtilities/Mutex.h" />
+		<Unit filename="../CommonUtilities/json/json/json-forwards.h" />
+		<Unit filename="../CommonUtilities/json/json/json.h" />
+		<Unit filename="../CommonUtilities/json/jsoncpp.cpp" />
+		<Unit filename="Classes/ApiManager/ApiManager.cpp" />
+		<Unit filename="Classes/ApiManager/ApiManager.h" />
+		<Unit filename="Classes/ChatGroupServer/ChatGroupMiniServer.cpp" />
+		<Unit filename="Classes/ChatGroupServer/ChatGroupMiniServer.h" />
+		<Unit filename="Classes/ChatServersManager.cpp" />
+		<Unit filename="Classes/ChatServersManager.h" />
+		<Unit filename="Classes/Worker/Worker.cpp" />
+		<Unit filename="Classes/Worker/Worker.h" />
+		<Unit filename="Classes/WorkerDatabase/WorkerDatabase.cpp" />
+		<Unit filename="Classes/WorkerDatabase/WorkerDatabase.h" />
+		<Unit filename="Classes/WorkerManager/WorkerManager.cpp" />
+		<Unit filename="Classes/WorkerManager/WorkerManager.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

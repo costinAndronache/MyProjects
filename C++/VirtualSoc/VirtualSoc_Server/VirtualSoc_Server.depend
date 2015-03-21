@@ -1,0 +1,199 @@
+# depslib dependency file v1.0
+1421742706 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/main.cpp
+	<iostream>
+	<json/json.h>
+	<json/json.h>
+	<Worker.h>
+	<cstdlib>
+	<unistd.h>
+	"WorkerManager.h"
+	"CommonConstants.h"
+	"ApiManager.h"
+	<NetworkUtilities/NetworkUtilities.h>
+	<sys/socket.h>
+	"ChatGroupMiniServer.h"
+
+1420891388 /home/costin/Desktop/Proiect_Retele_VirtualSoc/CommonUtilities/json/json/json.h
+	<cpptl/config.h>
+	"config.h"
+	"forwards.h"
+	"forwards.h"
+	<string>
+	<vector>
+	<map>
+	<cpptl/smallmap.h>
+	<cpptl/forwards.h>
+	"features.h"
+	"value.h"
+	<deque>
+	<iosfwd>
+	<stack>
+	<string>
+	"value.h"
+	<vector>
+	<string>
+	<stdlib.h>
+	"config.h"
+	<stdexcept>
+
+1420989824 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/CommonUtilities/json/jsoncpp.cpp
+	<json/json.h>
+	<json/assertions.h>
+	<json/reader.h>
+	<json/value.h>
+	"json_tool.h"
+	<utility>
+	<cstdio>
+	<cassert>
+	<cstring>
+	<istream>
+	<stdlib.h>
+	<assert.h>
+	<json/assertions.h>
+	<json/value.h>
+	<json/writer.h>
+	"json_batchallocator.h"
+	<math.h>
+	<sstream>
+	<utility>
+	<cstring>
+	<cassert>
+	<cpptl/conststring.h>
+	<cstddef>
+	"json_internalarray.inl"
+	"json_internalmap.inl"
+	"json_valueiterator.inl"
+	<json/writer.h>
+	"json_tool.h"
+	<utility>
+	<assert.h>
+	<stdio.h>
+	<string.h>
+	<sstream>
+	<iomanip>
+	<math.h>
+	<float.h>
+	<ieeefp.h>
+
+1420905834 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/Classes/WorkerManager/WorkerManager.cpp
+	"WorkerManager.h"
+
+1420905820 /home/costin/Desktop/Proiect_Retele_VirtualSoc/Classes/WorkerManager/WorkerManager.h
+	<map>
+
+1421816853 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/WorkerManager/WorkerManager.cpp
+	"WorkerManager.h"
+	"Worker.h"
+	"ChatGroupMiniServer.h"
+	<iostream>
+
+1421169557 /home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/WorkerManager/WorkerManager.h
+	<map>
+	<ThreadUtilities/Mutex.h>
+
+1421816451 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/Worker/Worker.cpp
+	"Worker.h"
+	<WorkerManager.h>
+	<WorkerDatabase.h>
+	"CommonConstants.h"
+	"ApiManager.h"
+	<json/json.h>
+	<pthread.h>
+	<sys/socket.h>
+	<unistd.h>
+	<cstdlib>
+	<iostream>
+	<oracle/12.1/client/occi.h>
+
+1421161407 /home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/Worker/Worker.h
+	<Queue.h>
+	<string>
+	<ThreadUtilities/Mutex.h>
+
+1421227208 /home/costin/Desktop/Proiect_Retele_VirtualSoc/CommonUtilities/Queue.h
+	<queue>
+	<thread>
+	<mutex>
+	<condition_variable>
+
+1420911894 /home/costin/Desktop/Proiect_Retele_VirtualSoc/CommonUtilities/ThreadUtilities/Mutex.h
+	<pthread.h>
+
+1420916708 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/Classes/ApiManager/ApiManager.cpp
+	"ApiManager.h"
+
+1420919590 /home/costin/Desktop/Proiect_Retele_VirtualSoc/Classes/ApiManager/ApiManager.h
+	<oracle/12.1/client/occi.h>
+	<string>
+	<json/json.h>
+	<map>
+
+1421747722 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/ApiManager/ApiManager.cpp
+	"ApiManager.h"
+	"CommonConstants.h"
+	<iostream>
+	<oracle/12.1/client/occi.h>
+	"ChatServersManager.h"
+	"WorkerDatabase.h"
+	"Worker/Worker.h"
+
+1421705609 /home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/ApiManager/ApiManager.h
+	<oracle/12.1/client/occi.h>
+	<string>
+	<json/json.h>
+	<map>
+	<ThreadUtilities/Mutex.h>
+
+1421705543 /home/costin/Desktop/Proiect_Retele_VirtualSoc/CommonUtilities/CommonConstants.h
+
+1421014870 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/WorkerDatabase/WorkerDatabase.cpp
+	"WorkerDatabase.h"
+
+1421014882 /home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/WorkerDatabase/WorkerDatabase.h
+	<ThreadUtilities/Mutex.h>
+	<string>
+	<map>
+
+1421167285 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/CommonUtilities/NetworkUtilities/NetworkUtilities.cpp
+	"NetworkUtilities.h"
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<netinet/in.h>
+	<unistd.h>
+	<errno.h>
+	<stdio.h>
+	<arpa/inet.h>
+	<utility>
+	<cstdlib>
+	<cstring>
+
+1421167351 /home/costin/Desktop/Proiect_Retele_VirtualSoc/CommonUtilities/NetworkUtilities/NetworkUtilities.h
+	<unistd.h>
+
+1421745749 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/ChatGroupServer/ChatGroupMiniServer.cpp
+	"ChatGroupMiniServer.h"
+	<NetworkUtilities/NetworkUtilities.h>
+	<sys/socket.h>
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<cstring>
+	<algorithm>
+	"WorkerManager.h"
+	"ChatServersManager.h"
+
+1421495494 /home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/ChatGroupServer/ChatGroupMiniServer.h
+	<vector>
+	<ThreadUtilities/Mutex.h>
+	<pthread.h>
+
+1421498004 /home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/ChatServersManager.h
+	<vector>
+	<map>
+	<ThreadUtilities/Mutex.h>
+
+1421498172 source:/home/costin/Desktop/Proiect_Retele_VirtualSoc/VirtualSoc_Server/Classes/ChatServersManager.cpp
+	"ChatServersManager.h"
+	"ChatGroupMiniServer.h"
+

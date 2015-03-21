@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GroupsAndPostsWidget</class>
+ <widget class="QWidget" name="GroupsAndPostsWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1213</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QListWidget" name="groupListWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>151</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="postListWidget">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>40</y>
+     <width>141</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="postListRefreshBtn">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>250</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refesh post list</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>18</x>
+     <y>20</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Groups</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>20</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Posts</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="refreshGroupListBtn">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refresh group List</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="groupDescriptionLabel">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>80</y>
+     <width>91</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="postContentLabel">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>80</y>
+     <width>91</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignHCenter|Qt::AlignTop</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>188</x>
+     <y>50</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Description</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>50</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Contents</string>
+   </property>
+  </widget>
+  <widget class="UserInfoWidget" name="userInfoWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>159</x>
+     <y>239</y>
+     <width>281</width>
+     <height>81</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="postContentTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>330</y>
+     <width>281</width>
+     <height>91</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sendPostBtn">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>430</y>
+     <width>151</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Send post to selected group</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>68</x>
+     <y>350</y>
+     <width>71</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="groupUsersList">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>490</y>
+     <width>131</width>
+     <height>241</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="myGroupsList">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>490</y>
+     <width>141</width>
+     <height>241</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="myFriendList">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>491</y>
+     <width>141</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::ExtendedSelection</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="myGroupListBtn">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>750</y>
+     <width>121</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refresh my group list</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="listGroupUsersBtn">
+   <property name="geometry">
+    <rect>
+     <x>14</x>
+     <y>750</y>
+     <width>121</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refresh group users</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>750</y>
+     <width>121</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refresh my friend list</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sendFriendRequest">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>530</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="text">
+    <string>Send friend request </string>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="groupInviteBtn">
+   <property name="geometry">
+    <rect>
+     <x>144</x>
+     <y>606</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Invite into my group</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="inviteStatusLabel">
+   <property name="geometry">
+    <rect>
+     <x>158</x>
+     <y>690</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>20</y>
+     <width>49</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Requests</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="notificationsList">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>41</y>
+     <width>151</width>
+     <height>191</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>730</x>
+     <y>250</y>
+     <width>151</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refresh notification list</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>80</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sender/Group:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="senderLabel">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>100</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>150</y>
+     <width>85</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Confirm</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="confirmLabel">
+   <property name="geometry">
+    <rect>
+     <x>898</x>
+     <y>200</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="ChatWidget" name="chatWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>400</y>
+     <width>401</width>
+     <height>391</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>700</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Start a chat group</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="groupCreateStatusLabel">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>310</y>
+     <width>241</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create a new group</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="groupNameTF">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>330</y>
+     <width>171</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="groupDescriptionTF">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>360</y>
+     <width>171</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>330</y>
+     <width>31</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>360</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Description</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="createGroupBtn">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>390</y>
+     <width>85</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create group</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deletePostBtn">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>170</y>
+     <width>111</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete selected post</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="deletePostStatusLabel">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>70</y>
+     <width>101</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="logoutBtn">
+   <property name="geometry">
+    <rect>
+     <x>1070</x>
+     <y>70</y>
+     <width>85</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Logout</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>UserInfoWidget</class>
+   <extends>QWidget</extends>
+   <header>userinfowidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ChatWidget</class>
+   <extends>QWidget</extends>
+   <header>chatwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

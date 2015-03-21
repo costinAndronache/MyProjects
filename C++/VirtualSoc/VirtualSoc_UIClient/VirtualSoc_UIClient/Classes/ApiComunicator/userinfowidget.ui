@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UserInfoWidget</class>
+ <widget class="QWidget" name="UserInfoWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>243</width>
+    <height>84</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>First name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>30</y>
+     <width>51</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Last name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>49</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="firstNameLabel">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>10</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="infoLabel">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>60</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lastNameLabel">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>30</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
