@@ -4,12 +4,53 @@ import java.util.*;
 import java.io.*;
 
 import com.PA.Exceptions.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class MovieDatabase 
 {
 	private List<Movie> moviesList;
 	private List<MovieCategory> categoriesList;
 	
+        
+              public static MovieDatabase createDummyDatabase()
+              {
+                  MovieDatabase db = new MovieDatabase();
+                  
+                  MovieCategory adv = new MovieCategory("Adventure");
+                  MovieCategory action = new MovieCategory("Action");
+                  
+                  db.addNewCategory(adv);
+                  db.addNewCategory(action);
+                  
+                  for(int i=1; i<=5; i++)
+                  {
+                      Movie m1 = new Movie();
+                      Movie m2 = new Movie();
+                      
+                      m1.setName("Action " + i);
+                      m2.setName("Adventure " + i);
+                      
+                      m1.addToCategory(action);
+                      m2.addToCategory(adv);
+                      
+                      adv.addNewMovie(m2);
+                      action.addNewMovie(m1);
+                      
+                      try {
+                          db.addNewMovie(m2);
+                          db.addNewMovie(m1);
+                      } catch (InexistentCategoryException ex) {
+                          Logger.getLogger(MovieDatabase.class.getName()).log(Level.SEVERE, null, ex);
+                      } catch (AlreadyExistingMovieException ex) {
+                          Logger.getLogger(MovieDatabase.class.getName()).log(Level.SEVERE, null, ex);
+                      }
+                      
+                  }
+                  
+                  return db;
+              }
+        
 	public MovieDatabase() 
 	{
 		// TODO Auto-generated constructor stub
@@ -23,8 +64,8 @@ public class MovieDatabase
 		this.moviesList.add(m);
 	}
 	
-	public void validateAlteredMovie(Movie m) throws InexistentCategoryException,
-																								  AlreadyExistingMovieException
+	public void validateAlteredMovie(Movie m) throws InexistentCategoryException, 
+                                                                             AlreadyExistingMovieException
 	{
 		this.validateMovie(m);
 	}
@@ -47,6 +88,11 @@ public class MovieDatabase
 		}
 	}
 	
+              public List<MovieCategory> getCategoriesList()
+              {
+                  return this.categoriesList;
+              }
+        
 	public void removeMovieWithName(String name)
 	{
 		Movie m = this.findMovieWithName(name);
@@ -132,7 +178,7 @@ public class MovieDatabase
 		return res;
 	}
 	
-	private MovieCategory findCategoryForName(String name)
+	public MovieCategory findCategoryForName(String name)
 	{
 		
 		for(MovieCategory mc : this.categoriesList)
@@ -148,7 +194,7 @@ public class MovieDatabase
 		MovieCategory[] cats = m.getCategoriesList();
 		for(int i=0; i<cats.length; i++)
 		{
-			if(this.categoriesList.contains(cats) == false)
+			if(this.categoriesList.contains(cats[i]) == false)
 			{
 				return false;
 			}

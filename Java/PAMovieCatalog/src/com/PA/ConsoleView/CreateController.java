@@ -7,6 +7,7 @@ import com.PA.Exceptions.InvalidDateException;
 import com.PA.Exceptions.InvalidDirectorNameException;
 import com.PA.Exceptions.InvalidRatingException;
 import com.PA.MovieCatalog.Movie;
+import com.PA.MovieCatalog.MovieCategory;
 import com.PA.MovieCatalog.MovieDatabase;
 public class CreateController extends MenuController 
 {
@@ -75,15 +76,28 @@ public class CreateController extends MenuController
 		int numOfCategories;
 		print("How many categories does this movie belong to?: ");
 		numOfCategories = s.nextInt();
+                           
 		s.nextLine();
 		for(int i=1; i<=numOfCategories; i++)
 		{
 			System.out.print("Category: ");
 			String newCat = s.nextLine();
-			m.addToCategory(newCat);
+                                        MovieCategory cat = db.findCategoryForName(newCat);
+                                        
+                                        if(cat == null)
+                                        {
+                                            cat = new MovieCategory(newCat);
+                                        }
+                                        
+			m.addToCategory(cat);
 		}
-		
-		db.addNewMovie(m);
+		try
+                    {
+                        db.addNewMovie(m);
+                    }catch(Exception e)
+                    {
+                        System.out.print(e);
+                    }
 		print("Thank you! \n");
 	}
 	

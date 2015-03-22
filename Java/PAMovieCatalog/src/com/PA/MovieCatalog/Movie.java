@@ -6,13 +6,14 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Pattern;
 
-import com.PA.Exceptions.InvalidDateException;
-import com.PA.Exceptions.InvalidDirectorNameException;
-import com.PA.Exceptions.InvalidRatingException;
+import java.io.*;
+
+import com.PA.Exceptions.*;
 import com.sun.xml.internal.ws.util.StringUtils;
 
 public class Movie implements Serializable 
 {
+             
 	private String name;
 	private String filePath;
 	private List<MovieCategory> categoriesList;
@@ -38,9 +39,16 @@ public class Movie implements Serializable
 		return name;
 	}
 	
-	public void setFilePath(String path)
+	public void setFilePath(String path) throws InvalidMoviePathException
 	{
-		this.filePath = path;
+                    File f = new File(path);
+                    
+                    if(f.isFile() == false)
+                    {
+                        throw new InvalidMoviePathException(path);
+                    }
+                    
+                    this.filePath = path;
 	}
 	
 	public String getFilePath()
@@ -121,7 +129,10 @@ public class Movie implements Serializable
 		this.rating = rating;
 	}
 	
-	
+              
+
+        
+       
 	public String getReleaseDate()
 	{
 		return this.releaseDate;
