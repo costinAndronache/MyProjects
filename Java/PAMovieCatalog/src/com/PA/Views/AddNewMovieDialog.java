@@ -334,6 +334,11 @@ public class AddNewMovieDialog extends javax.swing.JDialog implements MovieSuppl
         //TO DO add the categories
         int[] selectedIndices = this.categoriesList.getSelectedIndices();
         
+        if(selectedIndices == null || selectedIndices.length == 0)
+        {
+            JOptionPane.showMessageDialog(this, "The movie must part of at least a category!");
+        }
+        
         for(int i=0; i<selectedIndices.length; i++)
         {
             int catIndex = selectedIndices[i];

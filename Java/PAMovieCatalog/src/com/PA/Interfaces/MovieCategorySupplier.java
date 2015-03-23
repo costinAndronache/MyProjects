@@ -13,7 +13,6 @@ import com.PA.MovieCatalog.*;
  */
 public interface MovieCategorySupplier 
 {
-    public void setMovieDatabase(MovieDatabase db);
     public void addListener(MovieCategorySupplierListener listener);
     public void removeListener(MovieCategorySupplierListener listener);
 }

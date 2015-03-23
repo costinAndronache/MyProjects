@@ -16,7 +16,6 @@ import javax.swing.WindowConstants;
  */
 public class AddNewCategoryDialog extends javax.swing.JDialog implements MovieCategorySupplier {
 
-    private MovieDatabase db;
     private MovieCategorySupplierListener listener;
     
     
@@ -107,6 +106,11 @@ public class AddNewCategoryDialog extends javax.swing.JDialog implements MovieCa
         {
             MovieCategory cat = new MovieCategory(categoryNameTF.getText());
             this.listener.movieCategorySupplierDidCreateMovieCategory(this, cat);
+            this.cancelBtnMouseClicked(null);
+        }
+        else
+        {
+            System.out.println("Null listener");
         }
         
     }//GEN-LAST:event_addCategoryBtnMouseClicked
@@ -146,8 +150,8 @@ public class AddNewCategoryDialog extends javax.swing.JDialog implements MovieCa
             public void run() {
                 AddNewCategoryDialog dialog = new AddNewCategoryDialog(new javax.swing.JFrame(), true);
                 dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-                dialog.setVisible(true);
                 dialog.addListener(finalListener);
+                dialog.setVisible(true);   
             }
         });
     }
@@ -162,9 +166,6 @@ public class AddNewCategoryDialog extends javax.swing.JDialog implements MovieCa
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
-    public void setMovieDatabase(MovieDatabase db) {
-        this.db = db;
-    }
 
     public void addListener(MovieCategorySupplierListener listener) 
     {

@@ -4,14 +4,19 @@
  * and open the template in the editor.
  */
 package com.PA.Views;
+import com.PA.Exceptions.AlreadyExistingMovieException;
+import com.PA.Exceptions.InexistentCategoryException;
 import com.PA.Interfaces.*;
 import com.PA.MovieCatalog.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Costinel
  */
-public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListener, MovieSupplierListener
+public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListener, MovieSupplierListener, 
+                                                                                    MovieCategorySupplierListener
 {
 
     /**
@@ -62,6 +67,11 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
         });
 
         addCategoryBtn.setText("Add a new category");
+        addCategoryBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addCategoryBtnMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -122,6 +132,11 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
         AddNewMovieDialog.createWithCategoriesListAndListener(db.getCategoriesList(), this);
         
     }//GEN-LAST:event_addMovieBtnMouseClicked
+
+    private void addCategoryBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addCategoryBtnMouseClicked
+        // TODO add your handling code here:
+        AddNewCategoryDialog.createWithListener(this);
+    }//GEN-LAST:event_addCategoryBtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -199,7 +214,22 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
     // Movie supplier listener
     public void movieSupplierDidCreateMovie(MovieSupplier controller, Movie movie) 
     {
+        try {
+            this.db.addNewMovie(movie);
+        } catch (InexistentCategoryException ex) {
+            Logger.getLogger(MainAppView.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (AlreadyExistingMovieException ex) {
+            Logger.getLogger(MainAppView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        this.movieDbTreePanel.reloadData();
         System.out.println("Should add the new movie " + movie.getName());
         
+    }
+
+    public void movieCategorySupplierDidCreateMovieCategory(MovieCategorySupplier supplier, MovieCategory movCat) 
+    {
+        this.db.addNewCategory(movCat);
+        this.movieDbTreePanel.reloadData();
     }
 }
