@@ -10,25 +10,45 @@ import com.PA.MovieCatalog.*;
 import javax.swing.*;
 import com.PA.Interfaces.*;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
  * @author Costinel
  */
-public class AddNewMovieDialog extends javax.swing.JDialog implements MovieSupplier
+public class MovieDialog extends javax.swing.JDialog implements MovieSupplier
 {
     
     private List<MovieCategory> movieCategoriesList;
     private MovieSupplierListener listener;
     
-    
+    private Movie editedMovie;
+    boolean isInEditingMode = false;
     
     /**
      * Creates new form AddNewMovieDialog
      */
-    public AddNewMovieDialog(java.awt.Frame parent, boolean modal) {
+    public MovieDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+    }
+    
+    public void editTheMovie(Movie m)
+    {
+        this.editedMovie = m;
+        this.isInEditingMode = true;
+        
+        this.movieNameTF.setText(m.getName());
+        this.imdbTF.setText(m.getImdbID());
+        this.ratingTF.setText(m.getRating() + "");
+        this.releaseDateTF.setText(m.getReleaseDate());
+        this.directorNameTF.setText(m.getDirectorName());
+        this.filePathTF.setText(m.getFilePath());
+        
+        this.addMovieBtn.setText("Edit movie");
     }
     
     @Override
@@ -148,6 +168,17 @@ public class AddNewMovieDialog extends javax.swing.JDialog implements MovieSuppl
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel8.setText("File path:");
 
+        filePathTF.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                filePathTFMouseClicked(evt);
+            }
+        });
+        filePathTF.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                filePathTFFocusGained(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -240,6 +271,20 @@ public class AddNewMovieDialog extends javax.swing.JDialog implements MovieSuppl
         // TODO add your handling code here:
         if(this.listener != null)
         {
+            if(this.isInEditingMode == true)
+            {
+                try {
+                    this.updatedCurrentEditedMovie();
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(this, ex);
+                    return;
+                }
+                
+                this.listener.movieSupplierDidEditMovie(this, editedMovie);
+                this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+                return;
+            }
+            
             Movie m = this.createMovieFromFields();
             if(m != null)
             {
@@ -255,6 +300,33 @@ public class AddNewMovieDialog extends javax.swing.JDialog implements MovieSuppl
         
         this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
     }//GEN-LAST:event_cancelBtnMouseClicked
+
+    private void filePathTFFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_filePathTFFocusGained
+        // TODO add your handling code here:
+
+        
+    }//GEN-LAST:event_filePathTFFocusGained
+
+    private void filePathTFMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_filePathTFMouseClicked
+        // TODO add your handling code here:
+        
+        JFileChooser chooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(
+        "Movie files", "avi", "mpeg", "divx", "webm");
+        chooser.setFileFilter(filter);
+        int returnVal = chooser.showOpenDialog(this);
+        if(returnVal == JFileChooser.APPROVE_OPTION) 
+        {
+         try {
+             this.filePathTF.setText(chooser.getSelectedFile().getCanonicalPath());
+            } catch (IOException ex) {
+              Logger.getLogger(MovieDialog.class.getName()).log(Level.SEVERE, null, ex);
+            }
+         System.out.println("You chose to open this file: " +
+              chooser.getSelectedFile().getName());
+    }
+        
+    }//GEN-LAST:event_filePathTFMouseClicked
 
 
     public static void createWithCategoriesListAndListener(List<MovieCategory> categoriesList,
@@ -277,20 +349,21 @@ public class AddNewMovieDialog extends javax.swing.JDialog implements MovieSuppl
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddNewMovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddNewMovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddNewMovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddNewMovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                AddNewMovieDialog dialog = new AddNewMovieDialog(new javax.swing.JFrame(), true);
+                MovieDialog dialog = new MovieDialog(new javax.swing.JFrame(), true);
                 dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
                 dialog.setListOfCategories(finalList);
                 dialog.addListener(finalListener);
@@ -298,6 +371,52 @@ public class AddNewMovieDialog extends javax.swing.JDialog implements MovieSuppl
             }
         });
     }
+    
+    public static void editWithCategoriesListAndListenerAndMovie(List<MovieCategory> categoriesList,
+                                                                          MovieSupplierListener listener, Movie m) 
+    {
+        
+        final List<MovieCategory> finalList = categoriesList;
+        final MovieSupplierListener finalListener = listener;
+        final Movie finalMovie = m;
+        
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(MovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(MovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(MovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(MovieDialog.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the dialog */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                MovieDialog dialog = new MovieDialog(new javax.swing.JFrame(), true);
+                dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+                dialog.setListOfCategories(finalList);
+                dialog.addListener(finalListener);
+                dialog.editTheMovie(finalMovie);
+                dialog.setVisible(true);
+            }
+        });
+    }
+    
 
     
     public Movie createMovieFromFields()
@@ -331,6 +450,12 @@ public class AddNewMovieDialog extends javax.swing.JDialog implements MovieSuppl
             return null;
         }
         
+        try {
+            m.setFilePath(this.filePathTF.getText());
+        } catch (InvalidMoviePathException ex) {
+            Logger.getLogger(MovieDialog.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         //TO DO add the categories
         int[] selectedIndices = this.categoriesList.getSelectedIndices();
         
@@ -350,6 +475,30 @@ public class AddNewMovieDialog extends javax.swing.JDialog implements MovieSuppl
         
         return m;
     }
+    
+    private void updatedCurrentEditedMovie() throws Exception
+    {
+        this.editedMovie.setName(this.movieNameTF.getText());
+        this.editedMovie.setDirectorName(this.directorNameTF.getText());
+        this.editedMovie.setFilePath(this.filePathTF.getText());
+        this.editedMovie.setRating( Float.parseFloat(this.ratingTF.getText()));
+        this.editedMovie.setImdbID(this.imdbTF.getText());
+        this.editedMovie.setReleaseDate(this.releaseDateTF.getText());
+        
+        int[] selectedIndices = this.categoriesList.getSelectedIndices();
+        for(int i=0; i<selectedIndices.length; i++)
+        {
+            MovieCategory cat = this.movieCategoriesList.get(selectedIndices[i]);
+            if(this.editedMovie.belongsToCategory(cat) == false)
+            {
+                this.editedMovie.addToCategory(cat);
+                cat.addNewMovie(editedMovie);
+            }
+            
+        }
+        
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addMovieBtn;
     private javax.swing.JButton cancelBtn;

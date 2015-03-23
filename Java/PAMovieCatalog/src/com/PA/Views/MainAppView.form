@@ -53,11 +53,13 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="addMovieBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="addCategoryBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="102" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="editMovieBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="113" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -68,6 +70,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="addMovieBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="addCategoryBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="editMovieBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="15" max="32767" attributes="0"/>
                   </Group>
@@ -91,6 +94,14 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="addCategoryBtnMouseClicked"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JButton" name="editMovieBtn">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Edit Movie"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editMovieBtnMouseClicked"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel4">
@@ -108,7 +119,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jSplitPane2" alignment="0" pref="194" max="32767" attributes="0"/>
+                  <Component id="jSplitPane2" alignment="0" pref="372" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>

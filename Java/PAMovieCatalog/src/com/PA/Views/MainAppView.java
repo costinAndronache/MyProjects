@@ -24,6 +24,7 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
      */
     
     private MovieDatabase db;
+    private Movie currentSelectedMovie;
     
     public MainAppView() {
         initComponents();
@@ -48,6 +49,7 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
         jPanel3 = new javax.swing.JPanel();
         addMovieBtn = new javax.swing.JButton();
         addCategoryBtn = new javax.swing.JButton();
+        editMovieBtn = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jSplitPane2 = new javax.swing.JSplitPane();
         movieDbTreePanel = new com.PA.Views.MovieDbTreePanel();
@@ -73,16 +75,25 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
             }
         });
 
+        editMovieBtn.setText("Edit Movie");
+        editMovieBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                editMovieBtnMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(106, 106, 106)
+                .addContainerGap()
                 .addComponent(addMovieBtn)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(addCategoryBtn)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(editMovieBtn)
+                .addContainerGap(113, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,7 +101,8 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addMovieBtn)
-                    .addComponent(addCategoryBtn))
+                    .addComponent(addCategoryBtn)
+                    .addComponent(editMovieBtn))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -108,7 +120,7 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+            .addComponent(jSplitPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
         );
 
         jSplitPane3.setRightComponent(jPanel4);
@@ -129,7 +141,7 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
 
     private void addMovieBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMovieBtnMouseClicked
         
-        AddNewMovieDialog.createWithCategoriesListAndListener(db.getCategoriesList(), this);
+        MovieDialog.createWithCategoriesListAndListener(db.getCategoriesList(), this);
         
     }//GEN-LAST:event_addMovieBtnMouseClicked
 
@@ -137,6 +149,11 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
         // TODO add your handling code here:
         AddNewCategoryDialog.createWithListener(this);
     }//GEN-LAST:event_addCategoryBtnMouseClicked
+
+    private void editMovieBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editMovieBtnMouseClicked
+        // TODO add your handling code here:
+        MovieDialog.editWithCategoriesListAndListenerAndMovie(db.getCategoriesList(), this, currentSelectedMovie);
+    }//GEN-LAST:event_editMovieBtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -176,6 +193,7 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addCategoryBtn;
     private javax.swing.JButton addMovieBtn;
+    private javax.swing.JButton editMovieBtn;
     private com.PA.Views.InfoPanel infoPanel;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -188,11 +206,16 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
     //DbTreeListener
     public void movieDbTreeDidSelectMovie(MovieDbTreePanel dbTreePanel, Movie m) 
     {
+        this.currentSelectedMovie = m;
+        this.editMovieBtn.setVisible(true);
+        
         this.infoPanel.displayInfoForMovie(m);
     }
 
     public void movieDbTreeDidSelectCategory(MovieDbTreePanel dbTreePanel, MovieCategory mc) 
     {
+        this.currentSelectedMovie = null;
+        this.editMovieBtn.setVisible(false);
         this.infoPanel.displayInfoForCategory(mc);
     }
 
@@ -231,5 +254,11 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
     {
         this.db.addNewCategory(movCat);
         this.movieDbTreePanel.reloadData();
+    }
+
+    public void movieSupplierDidEditMovie(MovieSupplier supplier, Movie movie) 
+    {
+        this.movieDbTreePanel.reloadData();
+        this.infoPanel.displayInfoForMovie(movie);
     }
 }

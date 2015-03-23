@@ -21,12 +21,13 @@ public class InfoPanel extends javax.swing.JPanel {
     
     public void displayInfoForMovie(Movie m)
     {
-        this.testLabel.setText(m.getName());
+        this.movieInfoPanel.displayInfoForMovie(m);
+        //this.testLabel.setText(m.getName());
     }
     
     public void displayInfoForCategory(MovieCategory mc)
     {
-        this.testLabel.setText(mc.getName());
+        //this.testLabel.setText(mc.getName());
     }
     
     /**
@@ -38,30 +39,27 @@ public class InfoPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        testLabel = new javax.swing.JLabel();
-
-        testLabel.setText("jLabel1");
+        movieInfoPanel = new com.PA.Views.MovieInfoPanel();
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(134, 134, 134)
-                .addComponent(testLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(movieInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(89, 89, 89)
-                .addComponent(testLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(161, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(movieInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel testLabel;
+    private com.PA.Views.MovieInfoPanel movieInfoPanel;
     // End of variables declaration//GEN-END:variables
 }

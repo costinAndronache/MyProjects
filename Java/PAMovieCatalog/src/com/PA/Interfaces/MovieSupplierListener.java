@@ -12,4 +12,5 @@ import com.PA.MovieCatalog.Movie;
  */
 public interface MovieSupplierListener {
     public void movieSupplierDidCreateMovie(MovieSupplier controller, Movie movie);
+    public void movieSupplierDidEditMovie(MovieSupplier supplier, Movie movie);
 }
