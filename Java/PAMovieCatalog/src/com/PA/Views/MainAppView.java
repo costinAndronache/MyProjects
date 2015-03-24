@@ -9,6 +9,7 @@ import com.PA.Exceptions.InexistentCategoryException;
 import com.PA.Interfaces.*;
 import com.PA.MovieCatalog.*;
 import java.io.File;
+import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -281,22 +282,26 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
     {
         this.currentSelectedMovie = null;
         this.editMovieBtn.setVisible(false);
-        this.infoPanel.displayInfoForCategory(mc);
+        this.infoPanel.displayInfoForMovieList(Arrays.asList(mc.getAllMoviesList()));
     }
 
     public void movieDbTreeDidSelectRootCategoryNode(MovieDbTreePanel dbTreePanel) 
     {
-        System.out.print("Not yet");
+        
+        this.editMovieBtn.setVisible(false);
+        this.infoPanel.displayInfoForMovieList(db.getListOfMovies());
     }
 
     public void movieDbTreeDidSelectRootMoviesNode(MovieDbTreePanel dbTreePanel) 
     {
-        System.out.print("Not yet");
+        this.editMovieBtn.setVisible(false);
+        this.infoPanel.displayInfoForMovieList(db.getListOfMovies());
     }
 
     public void movieDbTreeDidSelectRootNode(MovieDbTreePanel dbTreePanel) 
     {
-        System.out.print("Not yet");
+        this.editMovieBtn.setVisible(false);
+        this.infoPanel.displayInfoForMovieList(db.getListOfMovies());
     }
 
     // Movie supplier listener

@@ -5,6 +5,7 @@
  */
 package com.PA.Views;
 import com.PA.MovieCatalog.*;
+import java.util.*;
 
 /**
  *
@@ -21,13 +22,16 @@ public class InfoPanel extends javax.swing.JPanel {
     
     public void displayInfoForMovie(Movie m)
     {
+        this.movieListPanel.setVisible(false);
+        this.movieInfoPanel.setVisible(true);
         this.movieInfoPanel.displayInfoForMovie(m);
-        //this.testLabel.setText(m.getName());
     }
     
-    public void displayInfoForCategory(MovieCategory mc)
+    public void displayInfoForMovieList(List<Movie> movieList)
     {
-        //this.testLabel.setText(mc.getName());
+        this.movieInfoPanel.setVisible(false);
+        this.movieListPanel.setVisible(true);
+        this.movieListPanel.displayMovieList(movieList);
     }
     
     /**
@@ -40,26 +44,16 @@ public class InfoPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         movieInfoPanel = new com.PA.Views.MovieInfoPanel();
+        movieListPanel = new com.PA.Views.MovieListPanel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(movieInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(movieInfoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(movieInfoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, -1));
+        add(movieListPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 366));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.PA.Views.MovieInfoPanel movieInfoPanel;
+    private com.PA.Views.MovieListPanel movieListPanel;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,12 +4,10 @@ import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.regex.Pattern;
 
 import java.io.*;
 
 import com.PA.Exceptions.*;
-import com.sun.xml.internal.ws.util.StringUtils;
 
 public class Movie implements Serializable 
 {
