@@ -59,7 +59,11 @@
                       <Component id="addCategoryBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="editMovieBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="113" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="loadXMLBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="saveXMLBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -71,6 +75,8 @@
                           <Component id="addMovieBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="addCategoryBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="editMovieBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="loadXMLBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="saveXMLBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="15" max="32767" attributes="0"/>
                   </Group>
@@ -102,6 +108,22 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editMovieBtnMouseClicked"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JButton" name="loadXMLBtn">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Load XML"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="loadXMLBtnMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="saveXMLBtn">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Save XML"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="saveXMLBtnMouseClicked"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel4">
@@ -114,7 +136,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jSplitPane2" alignment="0" pref="474" max="32767" attributes="0"/>
+                  <Component id="jSplitPane2" alignment="0" pref="551" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">

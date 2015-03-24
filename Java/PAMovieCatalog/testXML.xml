@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MovieApp>
+  <categoryList>
+    <category>
+      <categoryName>Adventure</categoryName>
+    </category>
+    <category>
+      <categoryName>Action</categoryName>
+    </category>
+  </categoryList>
+  <movieList>
+    <movie>
+      <movieName>Adventure 1</movieName>
+      <movieRating>0.0</movieRating>
+      <movieReleaseDate />
+      <movieIMDB />
+      <movieDirector />
+      <moviePath />
+      <movieCatList>
+        <category>
+          <categoryName>Adventure</categoryName>
+        </category>
+      </movieCatList>
+    </movie>
+    <movie>
+      <movieName>Action 1</movieName>
+      <movieRating>0.0</movieRating>
+      <movieReleaseDate />
+      <movieIMDB />
+      <movieDirector />
+      <moviePath />
+      <movieCatList>
+        <category>
+          <categoryName>Action</categoryName>
+        </category>
+      </movieCatList>
+    </movie>
+    <movie>
+      <movieName>Adventure 2</movieName>
+      <movieRating>0.0</movieRating>
+      <movieReleaseDate />
+      <movieIMDB />
+      <movieDirector />
+      <moviePath />
+      <movieCatList>
+        <category>
+          <categoryName>Adventure</categoryName>
+        </category>
+      </movieCatList>
+    </movie>
+    <movie>
+      <movieName>Action 2</movieName>
+      <movieRating>0.0</movieRating>
+      <movieReleaseDate />
+      <movieIMDB />
+      <movieDirector />
+      <moviePath />
+      <movieCatList>
+        <category>
+          <categoryName>Action</categoryName>
+        </category>
+      </movieCatList>
+    </movie>
+    <movie>
+      <movieName>Adventure 3</movieName>
+      <movieRating>0.0</movieRating>
+      <movieReleaseDate />
+      <movieIMDB />
+      <movieDirector />
+      <moviePath />
+      <movieCatList>
+        <category>
+          <categoryName>Adventure</categoryName>
+        </category>
+      </movieCatList>
+    </movie>
+    <movie>
+      <movieName>Action 3</movieName>
+      <movieRating>0.0</movieRating>
+      <movieReleaseDate />
+      <movieIMDB />
+      <movieDirector />
+      <moviePath />
+      <movieCatList>
+        <category>
+          <categoryName>Action</categoryName>
+        </category>
+      </movieCatList>
+    </movie>
+    <movie>
+      <movieName>Adventure 4</movieName>
+      <movieRating>0.0</movieRating>
+      <movieReleaseDate />
+      <movieIMDB />
+      <movieDirector />
+      <moviePath />
+      <movieCatList>
+        <category>
+          <categoryName>Adventure</categoryName>
+        </category>
+      </movieCatList>
+    </movie>
+    <movie>
+      <movieName>Action 4</movieName>
+      <movieRating>0.0</movieRating>
+      <movieReleaseDate />
+      <movieIMDB />
+      <movieDirector />
+      <moviePath />
+      <movieCatList>
+        <category>
+          <categoryName>Action</categoryName>
+        </category>
+      </movieCatList>
+    </movie>
+    <movie>
+      <movieName>Adventure 5</movieName>
+      <movieRating>0.0</movieRating>
+      <movieReleaseDate />
+      <movieIMDB />
+      <movieDirector />
+      <moviePath />
+      <movieCatList>
+        <category>
+          <categoryName>Adventure</categoryName>
+        </category>
+      </movieCatList>
+    </movie>
+    <movie>
+      <movieName>Action 5</movieName>
+      <movieRating>0.0</movieRating>
+      <movieReleaseDate />
+      <movieIMDB />
+      <movieDirector />
+      <moviePath />
+      <movieCatList>
+        <category>
+          <categoryName>Action</categoryName>
+        </category>
+      </movieCatList>
+    </movie>
+  </movieList>
+</MovieApp>

@@ -8,8 +8,10 @@ import com.PA.Exceptions.AlreadyExistingMovieException;
 import com.PA.Exceptions.InexistentCategoryException;
 import com.PA.Interfaces.*;
 import com.PA.MovieCatalog.*;
+import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 
 /**
  *
@@ -30,7 +32,7 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
         initComponents();
         this.movieDbTreePanel.setListener(this);
         
-        db = MovieDatabase.createDummyDatabase();
+        db = new MovieDatabase();
         this.movieDbTreePanel.setDatabase(db);
         this.movieDbTreePanel.reloadData();
         
@@ -50,6 +52,8 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
         addMovieBtn = new javax.swing.JButton();
         addCategoryBtn = new javax.swing.JButton();
         editMovieBtn = new javax.swing.JButton();
+        loadXMLBtn = new javax.swing.JButton();
+        saveXMLBtn = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jSplitPane2 = new javax.swing.JSplitPane();
         movieDbTreePanel = new com.PA.Views.MovieDbTreePanel();
@@ -82,6 +86,20 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
             }
         });
 
+        loadXMLBtn.setText("Load XML");
+        loadXMLBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                loadXMLBtnMouseClicked(evt);
+            }
+        });
+
+        saveXMLBtn.setText("Save XML");
+        saveXMLBtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                saveXMLBtnMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -93,7 +111,11 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
                 .addComponent(addCategoryBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(editMovieBtn)
-                .addContainerGap(113, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(loadXMLBtn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(saveXMLBtn)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,7 +124,9 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addMovieBtn)
                     .addComponent(addCategoryBtn)
-                    .addComponent(editMovieBtn))
+                    .addComponent(editMovieBtn)
+                    .addComponent(loadXMLBtn)
+                    .addComponent(saveXMLBtn))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -116,7 +140,7 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
+            .addComponent(jSplitPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 551, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -154,6 +178,45 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
         // TODO add your handling code here:
         MovieDialog.editWithCategoriesListAndListenerAndMovie(db.getCategoriesList(), this, currentSelectedMovie);
     }//GEN-LAST:event_editMovieBtnMouseClicked
+
+    private void loadXMLBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loadXMLBtnMouseClicked
+        // TODO add your handling code here:
+        JFileChooser chooser = new JFileChooser();
+    chooser.setCurrentDirectory(new File("."));
+    int retrival = chooser.showOpenDialog(this);
+    if (retrival == JFileChooser.APPROVE_OPTION) 
+    {
+        try {
+             MovieDatabaseSerializer ser = new MovieDatabaseSerializer();
+             this.db = ser.deserializeFromXMLFile(chooser.getSelectedFile());
+             this.movieDbTreePanel.setDatabase(db);
+             this.movieDbTreePanel.reloadData();
+        }
+         catch (Exception ex) {
+            ex.printStackTrace();
+        }
+          }
+    }//GEN-LAST:event_loadXMLBtnMouseClicked
+
+    private void saveXMLBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveXMLBtnMouseClicked
+        // TODO add your handling code here:
+        
+        JFileChooser chooser = new JFileChooser();
+    chooser.setCurrentDirectory(new File("/home/me/Documents"));
+    int retrival = chooser.showSaveDialog(null);
+    if (retrival == JFileChooser.APPROVE_OPTION) 
+    {
+        try {
+            
+            MovieDatabaseSerializer ser = new MovieDatabaseSerializer();
+            ser.serializeDatabaseToXML(this.db, chooser.getSelectedFile().getCanonicalPath());
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+    
+    }//GEN-LAST:event_saveXMLBtnMouseClicked
 
     /**
      * @param args the command line arguments
@@ -199,7 +262,9 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
     private javax.swing.JPanel jPanel4;
     private javax.swing.JSplitPane jSplitPane2;
     private javax.swing.JSplitPane jSplitPane3;
+    private javax.swing.JButton loadXMLBtn;
     private com.PA.Views.MovieDbTreePanel movieDbTreePanel;
+    private javax.swing.JButton saveXMLBtn;
     // End of variables declaration//GEN-END:variables
 
     

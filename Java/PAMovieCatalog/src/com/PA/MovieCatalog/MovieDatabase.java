@@ -31,6 +31,7 @@ public class MovieDatabase
                       m1.setName("Action " + i);
                       m2.setName("Adventure " + i);
                       
+                      
                       m1.addToCategory(action);
                       m2.addToCategory(adv);
                       
@@ -205,6 +206,8 @@ public class MovieDatabase
 	
 	private boolean validateMovieNameForMovie(Movie m)
 	{
+                    
+                    
 		for(Movie aMovie : this.moviesList)
 		{
 			if(aMovie.getName().equals(m.getName()))
