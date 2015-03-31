@@ -18,6 +18,9 @@ public class InfoPanel extends javax.swing.JPanel {
      */
     public InfoPanel() {
         initComponents();
+        
+        this.movieInfoPanel.setVisible(false);
+        this.movieListPanel.setVisible(false);
     }
     
     public void displayInfoForMovie(Movie m)

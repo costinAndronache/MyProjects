@@ -202,7 +202,7 @@ public class MainAppView extends javax.swing.JFrame implements MovieDbTreeListen
     private void saveXMLBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_saveXMLBtnMouseClicked
         // TODO add your handling code here:
         
-        JFileChooser chooser = new JFileChooser();
+    JFileChooser chooser = new JFileChooser();
     chooser.setCurrentDirectory(new File("/home/me/Documents"));
     int retrival = chooser.showSaveDialog(null);
     if (retrival == JFileChooser.APPROVE_OPTION) 
