@@ -48,6 +48,8 @@ public class GameboardPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        statusLabel = new javax.swing.JLabel();
+
         addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 formMouseClicked(evt);
@@ -59,20 +61,33 @@ public class GameboardPanel extends javax.swing.JPanel {
             }
         });
 
+        statusLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        statusLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        statusLabel.setText("STATUS");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(459, Short.MAX_VALUE)
+                .addComponent(statusLabel)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(344, Short.MAX_VALUE)
+                .addComponent(statusLabel)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
        
+        if(!this.userInteractionEnabled)
+            return;
+        
         DetectInfo di = this.getRectForPoint(evt.getPoint());
         if(di != null)
         {
@@ -87,7 +102,8 @@ public class GameboardPanel extends javax.swing.JPanel {
     private void formMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseMoved
         // TODO add your handling code here:
         
-        
+        if(!this.userInteractionEnabled)
+            return;
         
         DetectInfo di = this.getRectForPoint(evt.getPoint());
         if(di != null)
@@ -98,11 +114,25 @@ public class GameboardPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_formMouseMoved
 
-
+    public void presentWaitForOtherPlayer()
+    {
+        this.userInteractionEnabled = false;
+        this.statusLabel.setText("Waiting for the other player");
+    }
+    
+    
+    public void presentWaitForInput()
+    {
+        this.userInteractionEnabled = true;
+        this.statusLabel.setText("Your turn.");
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel statusLabel;
     // End of variables declaration//GEN-END:variables
 
-    
+    private boolean userInteractionEnabled = true;
     private static final int offset = 10;
     
     private Rectangle highlightRect;

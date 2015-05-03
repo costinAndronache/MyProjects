@@ -11,13 +11,10 @@ import gobangpa.*;
  */
 
 import gobangServer.*;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.UnsupportedLookAndFeelException;
 
 import org.json.simple.*;
 import org.json.simple.parser.*;
@@ -32,6 +29,8 @@ public class Client implements ReadingThreadListener, GameboardPanelListener
     private GameboardPanel gameboardPanel;
     private long myID;
     private CircleType myCircleType;
+    
+    private BufferedWriter bw;
     
     public void run() throws IOException
     {
@@ -50,6 +49,8 @@ public class Client implements ReadingThreadListener, GameboardPanelListener
         
         BufferedReader br = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
         String message = br.readLine();
+        
+        this.bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
         
         try {
             this.analyzeServerMessage(message);
@@ -88,10 +89,36 @@ public class Client implements ReadingThreadListener, GameboardPanelListener
         JSONParser parser = new JSONParser();
         JSONObject obj = (JSONObject)parser.parse(message);
         
-        JSONObject serverMessage = (JSONObject)obj.get(JsonUtilties.kServerMessageKey);
+
         
         System.out.println("Received from the server " + message);
         
+         JSONObject serverMessage = (JSONObject)obj.get(JsonUtilties.kServerMessageKey);
+  
+         
+         if(serverMessage.containsKey(JsonUtilties.kMoveKey))
+         {
+             JSONObject moveObj = (JSONObject)serverMessage.get(JsonUtilties.kMoveKey);
+             long i = (Long)moveObj.get(JsonUtilties.kLineKey);
+             long j = (Long)moveObj.get(JsonUtilties.kColumnKey);
+             String color = (String)moveObj.get(JsonUtilties.kColorKey);
+             
+             CircleType ctype;
+             if(color.equalsIgnoreCase(JsonUtilties.kWhiteColorValue))
+                 ctype = CircleType.CircleTypeWhite;
+             else
+                 ctype = CircleType.CircleTypeBlack;
+             
+            try {
+                this.gameBoard.setCircleAt(ctype, (int)i, (int)j);
+                this.gameboardPanel.repaint();
+            } catch (Exception ex) 
+            {
+                Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            }
+             
+         }
+         
         if(serverMessage.containsKey(JsonUtilties.kSetupKey))
         {
             JSONObject setupObj = (JSONObject)serverMessage.get(JsonUtilties.kSetupKey);
@@ -112,6 +139,17 @@ public class Client implements ReadingThreadListener, GameboardPanelListener
             
             String what = (String)serverMessage.get(JsonUtilties.kRequestKey);
             
+            
+            if(what.equalsIgnoreCase(JsonUtilties.kRequestValueMove))
+            {
+                this.gameboardPanel.presentWaitForInput();
+            }
+            
+            if(what.equalsIgnoreCase(JsonUtilties.kRequestValueWait))
+            {
+                this.gameboardPanel.presentWaitForOtherPlayer();
+            }
+            
             if(what.equalsIgnoreCase(JsonUtilties.kRequestValueStart))
             {
                 System.out.println("Received start request");
@@ -125,6 +163,12 @@ public class Client implements ReadingThreadListener, GameboardPanelListener
                     @Override
                     public void run() 
                     {
+                        
+                        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
                         
                         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -142,15 +186,13 @@ public class Client implements ReadingThreadListener, GameboardPanelListener
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(GobangFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-                        
-                        
+                        //</editor-fold>
+                    
                         frame = new GobangFrame();
                         client.gameboardPanel = frame.getGameboardPanel();
                         client.gameboardPanel.setListener(client);
-                        
-                        Gameboard gb = new Gameboard(10, 10);
-                        
-                        client.gameboardPanel.setGameboard(gb);
+                    
+                        client.gameboardPanel.setGameboard(client.gameBoard);
                         client.gameboardPanel.repaint();
                         frame.setVisible(true);
                     }
@@ -180,15 +222,40 @@ public class Client implements ReadingThreadListener, GameboardPanelListener
     @Override
     public void gameboardPanelDidClickAt(GameboardPanel gbp, int i, int j) 
     {
+        if(this.gameBoard.isCellFree(i, j) == false)
+            return;
         
-        System.out.println("Detected click from the gameboard panel");
-        
+        String message = this.createMoveMessageForPosition(i, j);
         try {
-            this.gameBoard.setCircleAt(CircleType.CircleTypeBlack, i, j);
-        } catch (Exception ex) {
+            this.bw.write(message + "\n");
+        } catch (IOException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
         }
-        gbp.repaint();
+        try {
+            this.bw.flush();
+        } catch (IOException ex) {
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    
+    
+    
+    private String createMoveMessageForPosition(int i, int j)
+    {
+        
+        JSONObject moveObj = new JSONObject();
+        moveObj.put(JsonUtilties.kLineKey, i);
+        moveObj.put(JsonUtilties.kColumnKey, j);
+        
+        JSONObject body = new JSONObject();
+        body.put(JsonUtilties.kMoveKey, moveObj);
+        body.put(JsonUtilties.kPlayerIdKey, this.myID);
+        
+        JSONObject message = new JSONObject();
+        message.put(JsonUtilties.kPlayerMessageKey, body);
+        
+        return message.toJSONString();
     }
     
 }

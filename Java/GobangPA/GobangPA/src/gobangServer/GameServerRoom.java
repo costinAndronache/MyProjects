@@ -7,6 +7,7 @@ package gobangServer;
 
 import java.net.*;
 import org.json.simple.*;
+import org.json.simple.parser.*;
 import gobangpa.*;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -144,6 +145,16 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
                 this.player2BW.write(startMessage + "\n");
                 this.player2BW.flush();
                 
+                
+                String waitMessage = this.buildWaitMessageForPlayer();
+                String moveMessage = this.buildMoveMessage();
+                
+                this.player2BW.write(waitMessage + "\n");
+                this.player1BW.write(moveMessage + "\n");
+                this.player2BW.flush();
+                this.player1BW.flush();
+                
+            
             } catch (IOException ex) {
                 Logger.getLogger(GameServerRoom.class.getName()).log(Level.SEVERE, null, ex);
                 System.out.println("Could not send start to both players.");
@@ -197,6 +208,38 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
         return message.toJSONString();
     }
     
+    private String buildMoveMessageForLineAndColumnAndColor(int i, int j, String color)
+    {
+        JSONObject obj = new JSONObject();
+        obj.put(JsonUtilties.kLineKey, i);
+        obj.put(JsonUtilties.kColumnKey, j);
+        obj.put(JsonUtilties.kColorKey, color);
+        
+        JSONObject message = new JSONObject();
+        message.put(JsonUtilties.kServerMessageKey, obj);
+        
+        return message.toJSONString();
+    }
+    
+    private String buildWaitMessageForPlayer()
+    {
+        JSONObject obj = new JSONObject();
+        obj.put(JsonUtilties.kRequestKey, JsonUtilties.kRequestValueWait);
+        
+        JSONObject message = new JSONObject();
+        message.put(JsonUtilties.kServerMessageKey, obj);
+        return message.toJSONString();
+    }
+    
+    private String buildMoveMessage()
+    {
+        JSONObject obj = new JSONObject();
+        obj.put(JsonUtilties.kRequestKey, JsonUtilties.kRequestValueMove);
+        
+        JSONObject message = new JSONObject();
+        message.put(JsonUtilties.kServerMessageKey, obj);
+        return message.toJSONString();
+    }
     
     public static void main(String[] args)
     {
@@ -207,6 +250,59 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
             room.run();
         } catch (IOException ex) {
             Logger.getLogger(GameServerRoom.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    
+    
+    private void analyzeMessage(String message) throws ParseException
+    {
+        JSONParser parser = new JSONParser();
+        JSONObject obj = (JSONObject)parser.parse(message);
+        obj = (JSONObject)obj.get(JsonUtilties.kPlayerMessageKey);
+        
+        if(obj.containsKey(JsonUtilties.kMoveKey))
+        {
+            long playerID = (Long)obj.get(JsonUtilties.kPlayerIdKey);
+            
+            JSONObject moveObj = (JSONObject)obj.get(JsonUtilties.kMoveKey);
+            long i = (Long)moveObj.get(JsonUtilties.kLineKey);
+            long j = (Long)moveObj.get(JsonUtilties.kColumnKey);
+            
+            String color = playerID == 1 ? JsonUtilties.kWhiteColorValue : JsonUtilties.kBlackColorValue;
+            
+            String moveMessage = this.buildMoveMessageForLineAndColumnAndColor((int)i, (int)j, color);
+            
+            try
+            {
+            this.player1BW.write(moveMessage + "\n");
+            this.player2BW.write(message + "\n");
+            this.player1BW.flush();
+            this.player2BW.flush();
+            
+            
+            String moveReq = this.buildMoveMessage();
+            String waitReq = this.buildWaitMessageForPlayer();
+            
+            if(playerID == 1)
+            {
+                this.player1BW.write(waitReq + "\n");
+                this.player2BW.write(moveReq + "\n");
+            }
+            else
+            {
+                this.player1BW.write(moveReq + "\n");
+                this.player2BW.write(waitReq + "\n");
+            }
+            
+            this.player1BW.flush();
+            this.player2BW.flush();
+            
+            }catch(Exception e)
+            {
+                System.out.println("Could not send move message to both players");
+            }
+            
         }
         
     }
