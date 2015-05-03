@@ -30,6 +30,7 @@ public class GobangFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         gameboardPanel = new gobangpa.GameboardPanel();
+        statusLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,12 +40,16 @@ public class GobangFrame extends javax.swing.JFrame {
         gameboardPanel.setLayout(gameboardPanelLayout);
         gameboardPanelLayout.setHorizontalGroup(
             gameboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 544, Short.MAX_VALUE)
         );
         gameboardPanelLayout.setVerticalGroup(
             gameboardPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGap(0, 366, Short.MAX_VALUE)
         );
+
+        statusLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        statusLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        statusLabel.setText("STATUS");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -52,15 +57,19 @@ public class GobangFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(gameboardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(statusLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(gameboardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(gameboardPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(gameboardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(statusLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -103,11 +112,24 @@ public class GobangFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private gobangpa.GameboardPanel gameboardPanel;
+    private javax.swing.JLabel statusLabel;
     // End of variables declaration//GEN-END:variables
 
     public GameboardPanel getGameboardPanel()
     {
         return this.gameboardPanel;
     }
-
+    
+    void presentStatusWait()
+    {
+        this.statusLabel.setText("Waiting for the other player");
+        this.repaint();
+    }
+    
+    void presentStatusMove()
+    {
+        this.statusLabel.setText("Waiting for you");
+        this.repaint();
+    }
+    
 }

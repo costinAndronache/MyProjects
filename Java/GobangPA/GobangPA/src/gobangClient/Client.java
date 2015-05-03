@@ -35,12 +35,6 @@ public class Client implements ReadingThreadListener, GameboardPanelListener
     public void run() throws IOException
     {
         
-        try {
-            this.gameBoard.setCircleAt(CircleType.CircleTypeBlack, 0, 0);
-        } catch (Exception ex) {
-            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
         String host = null;
       
         System.out.println("Connecting to the server");
@@ -142,11 +136,19 @@ public class Client implements ReadingThreadListener, GameboardPanelListener
             
             if(what.equalsIgnoreCase(JsonUtilties.kRequestValueMove))
             {
+                if(this.frame == null)
+                    return;
+                
+                this.frame.presentStatusMove();
                 this.gameboardPanel.presentWaitForInput();
             }
             
             if(what.equalsIgnoreCase(JsonUtilties.kRequestValueWait))
             {
+                if(this.frame == null)
+                    return;
+                
+                this.frame.presentStatusWait();
                 this.gameboardPanel.presentWaitForOtherPlayer();
             }
             

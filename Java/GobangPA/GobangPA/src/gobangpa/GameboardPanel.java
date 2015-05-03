@@ -61,7 +61,9 @@ public class GameboardPanel extends javax.swing.JPanel {
             }
         });
 
+        statusLabel.setBackground(new java.awt.Color(0, 51, 51));
         statusLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        statusLabel.setForeground(new java.awt.Color(255, 51, 0));
         statusLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         statusLabel.setText("STATUS");
 
@@ -69,17 +71,17 @@ public class GameboardPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(459, Short.MAX_VALUE)
-                .addComponent(statusLabel)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(statusLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 505, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(344, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(statusLabel)
-                .addContainerGap())
+                .addContainerGap(344, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -102,6 +104,8 @@ public class GameboardPanel extends javax.swing.JPanel {
     private void formMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseMoved
         // TODO add your handling code here:
         
+        
+        
         if(!this.userInteractionEnabled)
             return;
         
@@ -116,6 +120,7 @@ public class GameboardPanel extends javax.swing.JPanel {
 
     public void presentWaitForOtherPlayer()
     {
+        System.out.println("Asked to present wait");
         this.userInteractionEnabled = false;
         this.statusLabel.setText("Waiting for the other player");
     }
@@ -123,6 +128,7 @@ public class GameboardPanel extends javax.swing.JPanel {
     
     public void presentWaitForInput()
     {
+        System.out.println("Asked to present input");
         this.userInteractionEnabled = true;
         this.statusLabel.setText("Your turn.");
     }
@@ -133,7 +139,7 @@ public class GameboardPanel extends javax.swing.JPanel {
     // End of variables declaration//GEN-END:variables
 
     private boolean userInteractionEnabled = true;
-    private static final int offset = 10;
+    private static final int offset = 30;
     
     private Rectangle highlightRect;
     

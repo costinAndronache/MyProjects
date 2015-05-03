@@ -28,9 +28,13 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
     
     private BufferedWriter player1BW, player2BW;
     
+    private Gameboard gameboard;
+    
     public GameServerRoom() throws IOException
     {
         this.serverSocket = new ServerSocket(8822);
+        
+        this.gameboard = new Gameboard(10, 10);
     }
     
     public int getPort()
@@ -46,6 +50,13 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
         synchronized(this)
         {
             System.out.println("Received stuff " + s + ", from player " + rt.getID());
+            
+            try {
+                this.analyzeMessage(s);
+            } catch (ParseException ex) {
+                Logger.getLogger(GameServerRoom.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
             if(s == null)
             {
                 rt.stop();
@@ -146,6 +157,12 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
                 this.player2BW.flush();
                 
                 
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(GameServerRoom.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
                 String waitMessage = this.buildWaitMessageForPlayer();
                 String moveMessage = this.buildMoveMessage();
                 
@@ -215,8 +232,12 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
         obj.put(JsonUtilties.kColumnKey, j);
         obj.put(JsonUtilties.kColorKey, color);
         
+        JSONObject moveObj = new JSONObject();
+        
+        moveObj.put(JsonUtilties.kMoveKey, obj);
+        
         JSONObject message = new JSONObject();
-        message.put(JsonUtilties.kServerMessageKey, obj);
+        message.put(JsonUtilties.kServerMessageKey, moveObj);
         
         return message.toJSONString();
     }
@@ -261,6 +282,7 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
         JSONObject obj = (JSONObject)parser.parse(message);
         obj = (JSONObject)obj.get(JsonUtilties.kPlayerMessageKey);
         
+        
         if(obj.containsKey(JsonUtilties.kMoveKey))
         {
             long playerID = (Long)obj.get(JsonUtilties.kPlayerIdKey);
@@ -276,10 +298,11 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
             try
             {
             this.player1BW.write(moveMessage + "\n");
-            this.player2BW.write(message + "\n");
+            this.player2BW.write(moveMessage + "\n");
             this.player1BW.flush();
             this.player2BW.flush();
             
+
             
             String moveReq = this.buildMoveMessage();
             String waitReq = this.buildWaitMessageForPlayer();
@@ -302,6 +325,17 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
             {
                 System.out.println("Could not send move message to both players");
             }
+            
+        }
+        
+    }
+    
+    private boolean checkGameOver()
+    {
+        CircleType[][] m = this.gameboard.getMatrixRepresentation();
+        
+        for(int i=0; i<m.length; i++)
+        {
             
         }
         
