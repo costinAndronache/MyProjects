@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="firstNameTF" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel5" min="-2" pref="57" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="startHourTF" min="-2" pref="76" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel6" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                  <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="stopHourTF" pref="76" max="32767" attributes="0"/>
+                  <Component id="lastNameTF" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace pref="137" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="trainsBetweenStationsBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="trainsAtStationAtStopBtn" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                      <Component id="schedulesForConductor" min="-2" pref="142" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="tracksBetweenStationsBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="trainAtStationStart" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="schedulesForTrain" min="-2" pref="142" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="infoTablePanel" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="conductorsBtn" alignment="0" max="32767" attributes="0"/>
+                          <Component id="trainsBtn" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tracksBtn" alignment="0" max="32767" attributes="0"/>
+                          <Component id="stationsBtn" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="trainNameTF" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="station1TF" min="-2" pref="76" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="station2TF" min="-2" pref="76" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="createTrainBtn" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="createConductorBtn" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="createScheduleBtn" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="pageNoTF" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                                  <Component id="countTF" alignment="0" min="-2" pref="57" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="204" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="createTrackBtn" max="32767" attributes="0"/>
+                                  <Component id="createStationBtn" pref="124" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="infoTablePanel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="stationsBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                  <Component id="pageNoTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="createStationBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tracksBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="trainsBtn" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Component id="trainNameTF" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="conductorsBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="station1TF" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="station2TF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel4" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="countTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="createTrackBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="createTrainBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="createConductorBtn" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="createScheduleBtn" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="startHourTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="stopHourTF" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="firstNameTF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lastNameTF" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="tracksBetweenStationsBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="trainAtStationStart" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="schedulesForTrain" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="trainsBetweenStationsBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="trainsAtStationAtStopBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="schedulesForConductor" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="views.InfoTablePanel" name="infoTablePanel">
+    </Component>
+    <Component class="javax.swing.JButton" name="stationsBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="View All Stations"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="stationsBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="tracksBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="View All Tracks"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tracksBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="trainsBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="View All Trains"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="trainsBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="conductorsBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="View All Conductors"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="conductorsBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Ubuntu" size="12" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Start row"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="pageNoTF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Ubuntu" size="12" style="1"/>
+        </Property>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Count"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="countTF">
+    </Component>
+    <Component class="javax.swing.JButton" name="createStationBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Create Station"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="createStationBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="createTrackBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Create Track"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="createTrackBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="createTrainBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Create Train"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="createTrainBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="createConductorBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Create Conductor"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="createConductorBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="createScheduleBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Create Schedule"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="createScheduleBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Leaving Station"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Arriving Station"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="station1TF">
+    </Component>
+    <Component class="javax.swing.JTextField" name="station2TF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="StartHour:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="startHourTF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="StopHour:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="stopHourTF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="First Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="firstNameTF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Last Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="lastNameTF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Train Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="trainNameTF">
+    </Component>
+    <Component class="javax.swing.JButton" name="tracksBetweenStationsBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Get tracks between stations"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tracksBetweenStationsBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="trainsBetweenStationsBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Get trains between stations"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="trainsBetweenStationsBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="trainAtStationStart">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Train leaving from station at starhour"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="trainAtStationStartMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="trainsAtStationAtStopBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Train arriving at station at stophour"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="trainsAtStationAtStopBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="schedulesForTrain">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Schedules for train"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="schedulesForTrainMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="schedulesForConductor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Schedules for conductor"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="schedulesForConductorMouseClicked"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>

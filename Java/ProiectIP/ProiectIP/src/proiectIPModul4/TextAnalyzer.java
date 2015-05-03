@@ -1,0 +1,15 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package proiectIPModul4;
+
+/**
+ *
+ * @author Costinel
+ */
+public  abstract class TextAnalyzer 
+{
+    public abstract String analyzeArticle(Article article);
+}

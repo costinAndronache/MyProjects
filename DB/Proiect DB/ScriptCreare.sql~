@@ -1,0 +1,79 @@
+DROP TABLE TRAIN_SCHEDULES;
+DROP TABLE TRAINS;
+DROP TABLE TRACKS;
+DROP TABLE STATIONS;
+DROP TABLE CONDUCTORS;
+
+CREATE TABLE STATIONS
+( stationID NUMBER PRIMARY KEY,
+  stationAddress VARCHAR2(30) UNIQUE,
+  stationName VARCHAR2(30) UNIQUE,
+  stationLat NUMBER NOT NULL,
+  stationLon NUMBER NOT NULL
+);
+/
+
+
+CREATE TABLE TRACKS
+(
+  trackID NUMBER PRIMARY KEY,
+  trackLength NUMBER NOT NULL,
+  fromStation NUMBER,
+  toStation NUMBER,
+  
+  CONSTRAINT fk_fromStation FOREIGN KEY (fromStation) REFERENCES STATIONS(stationID),
+  CONSTRAINT fk_toStation FOREIGN KEY (toStation) REFERENCES STATIONS(stationID)
+);
+/
+
+CREATE TABLE TRAINS
+(
+  trainID NUMBER PRIMARY KEY,
+  trainType NUMBER,
+  trainName VARCHAR2(30),
+  numOfWagons NUMBER DEFAULT 1
+);
+/
+
+CREATE TABLE CONDUCTORS
+(
+ conductorID NUMBER PRIMARY KEY,
+ firstName VARCHAR2(30),
+ lastName VARCHAR2(30)
+);
+/
+
+CREATE TABLE TRAIN_SCHEDULES
+(
+  trainID NUMBER,
+  trackID NUMBER,
+  conductorID NUMBER,
+  startHour NUMBER,
+  stopHour NUMBER,
+  
+  CONSTRAINT fk_trainID FOREIGN KEY (trainID) REFERENCES TRAINS(trainID),
+  CONSTRAINT fk_conductorID FOREIGN KEY (conductorID) REFERENCES CONDUCTORS(conductorID),
+  CONSTRAINT fk_trackID FOREIGN KEY (trackID) REFERENCES TRACKS(trackID)
+);
+
+/
+
+DROP INDEX tracks_FromTo;
+CREATE INDEX tracks_FromTo ON TRACKS(fromStation, toStation);
+/
+
+DROP INDEX schedules_trackStart;
+CREATE INDEX schedules_trackStart ON TRAIN_SCHEDULES(trackID, startHour);
+/
+
+DROP INDEX stations_LatLon;
+CREATE INDEX stations_LatLon ON STATIONS(stationLat, stationLon);
+/
+
+DROP INDEX unique_stationName;
+CREATE UNIQUE INDEX unique_stationName ON STATIONS(stationName);
+/
+
+DROP INDEX unique_trainName;
+CREATE UNIQUE INDEX unique_trainName ON TRAINS(trainName);
+/
