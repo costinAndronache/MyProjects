@@ -132,4 +132,17 @@ public class GobangFrame extends javax.swing.JFrame {
         this.repaint();
     }
     
+    
+    void presentStatusWin()
+    {
+        this.statusLabel.setText("YOU WON!");
+        this.repaint();
+    }
+    
+    void presentStatusLose()
+    {
+        this.statusLabel.setText("YOU LOST");
+        this.repaint();
+    }
+    
 }

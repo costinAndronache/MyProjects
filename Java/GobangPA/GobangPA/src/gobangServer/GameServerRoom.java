@@ -262,6 +262,28 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
         return message.toJSONString();
     }
     
+    
+    
+    private String buildWinMessage()
+    {
+        JSONObject obj = new JSONObject();
+        obj.put(JsonUtilties.kStatusKey, JsonUtilties.kStatusValueWin);
+        
+        JSONObject message = new JSONObject();
+        message.put(JsonUtilties.kServerMessageKey, obj);
+        return message.toJSONString();
+    }
+    
+    private String buildLoseMessage()
+    {
+         JSONObject obj = new JSONObject();
+        obj.put(JsonUtilties.kStatusKey, JsonUtilties.kStatusValueLose);
+        
+        JSONObject message = new JSONObject();
+        message.put(JsonUtilties.kServerMessageKey, obj);
+        return message.toJSONString();
+    }
+    
     public static void main(String[] args)
     {
         GameServerRoom room = null;
@@ -295,6 +317,14 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
             
             String moveMessage = this.buildMoveMessageForLineAndColumnAndColor((int)i, (int)j, color);
             
+            CircleType type = playerID == 1 ? CircleType.CircleTypeWhite : CircleType.CircleTypeBlack;
+            
+            try {
+                this.gameboard.setCircleAt(type, (int)i, (int)j);
+            } catch (Exception ex) {
+                System.out.println("ILLEGAL MOVE!!!");
+            }
+            
             try
             {
             this.player1BW.write(moveMessage + "\n");
@@ -321,6 +351,34 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
             this.player1BW.flush();
             this.player2BW.flush();
             
+            
+            boolean whiteWin = this.checkHorizontalWinForType(CircleType.CircleTypeWhite, 5) ||
+                                      this.checkVerticalWinForType(CircleType.CircleTypeWhite, 5);
+            
+            boolean blackWin  = this.checkHorizontalWinForType(CircleType.CircleTypeBlack, 5) ||
+                                      this.checkVerticalWinForType(CircleType.CircleTypeBlack, 5);
+            
+            String winMessage = this.buildWinMessage();
+            String loseMessage = this.buildLoseMessage();
+            
+            if(whiteWin)
+            {
+                this.player1BW.write(winMessage + "\n");
+                this.player2BW.write(loseMessage +"\n");
+            }
+            else
+                if(blackWin)
+                {
+                    this.player1BW.write(loseMessage + "\n");
+                    this.player2BW.write(winMessage + "\n");
+                }
+            
+            if(whiteWin || blackWin)
+            {
+                this.player1BW.flush();
+                this.player2BW.flush();
+            }
+            
             }catch(Exception e)
             {
                 System.out.println("Could not send move message to both players");
@@ -339,6 +397,51 @@ public class GameServerRoom implements ReadingThreadListener, Runnable
             
         }
         
+        return false;
     }
     
+    private boolean checkHorizontalWinForType(CircleType type, int number)
+    {
+        CircleType[][] m = this.gameboard.getMatrixRepresentation();
+        for(int i=0; i<m.length; i++)
+        {
+            int count = 0;
+            for(int j = 0; j<m[i].length; j++)
+                if(m[i][j] == type)
+                {
+                    count++;
+                    if(count == number)
+                        return true;
+                }
+            else
+                {
+                    count = 0;
+                }
+        }
+        
+        return false;
+    }
+    
+    
+    private boolean checkVerticalWinForType(CircleType type, int number)
+    {
+        CircleType[][] m = this.gameboard.getMatrixRepresentation();
+        for(int j=0; j<m[0].length; j++)
+        {
+            int count = 0;
+            for(int i = 0; i<m.length; i++)
+                if(m[i][j] == type)
+                {
+                    count++;
+                    if(count == number)
+                        return true;
+                }
+            else
+                {
+                    count = 0;
+                }
+        }
+        
+        return false;
+    }
 }

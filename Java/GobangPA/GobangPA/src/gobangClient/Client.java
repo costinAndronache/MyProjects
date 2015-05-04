@@ -90,6 +90,23 @@ public class Client implements ReadingThreadListener, GameboardPanelListener
          JSONObject serverMessage = (JSONObject)obj.get(JsonUtilties.kServerMessageKey);
   
          
+         if(serverMessage.containsKey(JsonUtilties.kStatusKey))
+         {
+             String statusValue = (String)serverMessage.get(JsonUtilties.kStatusKey);
+             
+             if(statusValue.equalsIgnoreCase(JsonUtilties.kStatusValueWin))
+             {
+                 frame.presentStatusWin();
+             }
+             else
+             {
+                 frame.presentStatusLose();
+             }
+             
+             
+         }
+         
+         
          if(serverMessage.containsKey(JsonUtilties.kMoveKey))
          {
              JSONObject moveObj = (JSONObject)serverMessage.get(JsonUtilties.kMoveKey);
