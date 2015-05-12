@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JTextField" name="functionTF2">
+    </Component>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[640, 480]"/>
+    </Property>
+  </Properties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jScrollPane1" alignment="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="zoomInBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="dataBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                              <Component id="clearBtnPressed" min="-2" pref="114" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="functionBtn" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="functionLabel" min="-2" pref="76" max="-2" attributes="0"/>
+                                  <Component id="functionTF" min="-2" pref="118" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="startTF" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                                  <Component id="startLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="stopTF" alignment="0" min="-2" pref="53" max="-2" attributes="0"/>
+                          <Component id="stopLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="stepLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="stepTF" min="-2" pref="53" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="statusLabel" min="-2" pref="144" max="-2" attributes="0"/>
+                                  <Component id="interpolateBtn" min="-2" pref="144" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="zoomOutBtn" min="-2" max="-2" attributes="0"/>
+                          <Component id="localeBtn" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="415" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="functionLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="startLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="stopLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="stepLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="startTF" alignment="1" min="-2" pref="28" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="functionBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="functionTF" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="stopTF" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="stepTF" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="interpolateBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="localeBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="zoomInBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="zoomOutBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="dataBtn" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="clearBtnPressed" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="statusLabel" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="views.GraphPanel" name="graphPanel">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="738" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="451" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="zoomInBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Zoom in"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="zoomInBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="zoomOutBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Zoom out"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="zoomOutBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="dataBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fill with data"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="dataBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="startTF">
+    </Component>
+    <Component class="javax.swing.JButton" name="functionBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="From function"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="functionBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="functionLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Function:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="functionTF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="startLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Start:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="stopTF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="stopLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Stop:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="stepTF">
+    </Component>
+    <Component class="javax.swing.JLabel" name="stepLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Step:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="interpolateBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Interpolate"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="interpolateBtnMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="statusLabel">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="Status:"/>
+        <Property name="verticalAlignment" type="int" value="1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="clearBtnPressed">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Clear red points"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="clearBtnPressedMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="localeBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Change locale"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="localeBtnMouseClicked"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
