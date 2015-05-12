@@ -2,58 +2,44 @@ import proiectIPModul4.TextAnalyzer;
 import com.aylien.textapi.TextAPIClient;
 import com.aylien.textapi.TextAPIException;
 import com.aylien.textapi.parameters.ConceptsParams;
-import com.aylien.textapi.parameters.SummarizeParams;
 import com.aylien.textapi.responses.Concept;
 import com.aylien.textapi.responses.Concepts;
-import com.aylien.textapi.responses.Summarize;
 import com.aylien.textapi.responses.SurfaceForm;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
  * Created by Ana on 5/11/2015.
  */
-public class SummaryAnalyzer implements TextAnalyzer
+public class ConceptAnalyzer implements TextAnalyzer
 {
     TextAPIClient client;
     String text;
-    SummarizeParams.Builder builder ;
-    String title;
-
-    public SummaryAnalyzer(TextAPIClient client , String text , String title)
+    ConceptsParams.Builder builder ;
+    public ConceptAnalyzer(TextAPIClient client , String text)
     {
         this.client=client;
         this.text=text;
-        this.title=title;
-        builder = SummarizeParams.newBuilder();
+        builder = ConceptsParams.newBuilder();
     }
-    @Override
+
     public ArrayList<String> analyze()
     {
         builder.setText(this.text);
-        builder.setTitle(this.title);
-
-        Summarize summ = null;
+        Concepts concepts = null;
         try {
-            summ = client.summarize(builder.build());
+            concepts = client.concepts(builder.build());
         } catch (TextAPIException e) {
             e.printStackTrace();
         }
-
         ArrayList<String > results = new ArrayList<String >();
-        for ( String sent : summ.getSentences())
-        {
-           results.add(sent);
+        for (Concept c: concepts.getConcepts()) {
+            for (SurfaceForm sf: c.getSurfaceForms()) {
+               // System.out.println(sf.getString());
+                results.add(sf.getString());
+            }
         }
-
         return results;
-    }
-    public void setText(String text)
-    {
-        this.text=text;
-    }
-    public void setTitle(String text)
-    {
-        this.title=text;
     }
 }

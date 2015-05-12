@@ -1,9 +1,7 @@
 import proiectIPModul4.TextAnalyzer;
 import com.aylien.textapi.TextAPIClient;
 import com.aylien.textapi.TextAPIException;
-import com.aylien.textapi.parameters.HashTagsParams;
 import com.aylien.textapi.parameters.SentimentParams;
-import com.aylien.textapi.responses.HashTags;
 import com.aylien.textapi.responses.Sentiment;
 
 import java.util.ArrayList;
@@ -11,14 +9,13 @@ import java.util.ArrayList;
 /**
  * Created by Ana on 5/11/2015.
  */
-public class PerspectiveAnalyzer implements TextAnalyzer
-{
+public class ImpressionAnalyzer implements TextAnalyzer{
     TextAPIClient client;
     String text;
     SentimentParams.Builder builder ;
 
 
-    public PerspectiveAnalyzer(TextAPIClient client , String text)
+    public ImpressionAnalyzer(TextAPIClient client , String text)
     {
         this.client=client;
         this.text=text;
@@ -36,7 +33,7 @@ public class PerspectiveAnalyzer implements TextAnalyzer
         }
 
         ArrayList<String > results = new ArrayList<String >();
-        results.add(re.getSubjectivity());
+        results.add(re.getPolarity());
         return results;
 
     }

@@ -173,7 +173,7 @@ public class MainAppFrame_1 extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(statusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(interpolateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(zoomOutBtn)
                             .addComponent(localeBtn))))
@@ -479,6 +479,30 @@ public class MainAppFrame_1 extends javax.swing.JPanel {
     public void setListener(MainnAppPanelListener listener)
     {
         this.listener = listener;
+    }
+    
+    
+    public void setModeFunctionInput()
+    {
+        this.interpolateBtn.setVisible(false);
+        this.dataBtn.setVisible(false);
+    }
+    
+    public void setModeFunctionInterpolate()
+    {
+        this.functionBtn.setVisible(false);
+        this.functionLabel.setVisible(false);
+        this.functionTF.setVisible(false);
+        this.functionTF2.setVisible(false);
+        
+        this.startLabel.setVisible(false);
+        this.stopLabel.setVisible(false);
+        this.stepLabel.setVisible(false);
+        
+        this.startTF.setVisible(false);
+        this.stepTF.setVisible(false);
+        this.stopTF.setVisible(false);
+        
     }
     
 }

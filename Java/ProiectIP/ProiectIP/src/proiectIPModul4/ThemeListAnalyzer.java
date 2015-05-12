@@ -12,7 +12,6 @@ package proiectIPModul4;
 public class ThemeListAnalyzer extends TextAnalyzer 
 {
 
-    @Override
     public String analyzeArticle(Article article)
     {
         return "Empty list";

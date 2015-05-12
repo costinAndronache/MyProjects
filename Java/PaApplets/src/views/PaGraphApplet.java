@@ -67,6 +67,20 @@ public class PaGraphApplet extends javax.swing.JApplet implements MainnAppPanelL
             this.otherApplet = appletOne;
         
         this.debugLabel.setText("The other applet is " + this.otherApplet.getName() + ", I am " + this.getName());
+        
+        String param = this.getParameter("type");
+        
+        if(param == null)
+        {
+            this.debugLabel.setText("Did not find parameter for type");
+            return;
+        }
+        
+        if(param.equalsIgnoreCase("interpolate"))
+            this.mainAppPanel.setModeFunctionInterpolate();
+        else
+            this.mainAppPanel.setModeFunctionInput();
+     
     }
 
     /**

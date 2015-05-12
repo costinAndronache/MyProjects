@@ -1,15 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package proiectIPModul4;
 
+
+import java.util.ArrayList;
+
 /**
- *
- * @author Costinel
+ * Created by Ana on 5/11/2015.
  */
-public  abstract class TextAnalyzer 
+public interface TextAnalyzer
 {
-    public abstract String analyzeArticle(Article article);
+    ArrayList<String> analyze();
 }
